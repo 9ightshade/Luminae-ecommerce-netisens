@@ -1,37 +1,76 @@
 export const Concerns = () => {
-    return (
-      <div className="bg-[#262626]">
-        <h1
-          className="color: #FFF;
-font-feature-settings: 'clig' off, 'liga' off;
-
-/* 32 Bold */
-font-family: Lato;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: 20p"
+  return (
+    <div className="bg-[#262626]">
+      <h1
+        className="text-white
+text-[2rem]
+font-[700]
+leading-[1.25rem]"
+      >
+        Tell us about your{" "}
+        <span
+          className="text-[#FFC94B]
+text-[2rem]
+font-[700]
+leading-[1.25rem]"
         >
-          Tell us about your <span>Concerns</span>
-        </h1>
-        <form action="" method="post">
-          <label htmlFor="name">Your Name</label>
-          <input type="text" placeholder="Enter Your Name here" id="name" />
+          Concerns
+        </span>
+      </h1>
+      <form action="" method="post">
+        <label
+          htmlFor="name"
+          className="text-white text-[.8rem]
+font-[400]
+leading-[1.25rem]"
+        >
+          Your Name
+        </label>
+        <input
+          type="text"
+          placeholder="Enter Your Name here"
+          id="name"
+          className="bg-transparent"
+        />
 
-          <label htmlFor="email">Email</label>
-          <input type="email" placeholder="Enter Your Email here" id="email" />
+        <label htmlFor="email" className="text-white">
+          Email
+        </label>
+        <input
+          type="email"
+          placeholder="Enter Your Email here"
+          id="email"
+          className="bg-transparent"
+        />
 
-          <label htmlFor="description">Description</label>
-          <textarea
-            name="description"
-            id="description"
-            cols="30"
-            rows="10"
-            placeholder="Tell us about your concerns"
-          ></textarea>
+        <label htmlFor="description" className="text-white">
+          Description
+        </label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          className="bg-transparent "
+          placeholder="Tell us about your concerns"
+        ></textarea>
 
-          <input type="button" value="SEND" className="block" />
-        </form>
-      </div>
-    );
-}
+        <input
+          type="button"
+          value="SEND"
+          className="block rounded-[4px];
+bg-[#4172DC]
+text-[#FFF]
+text-center
+text-[.8rem]
+font-[500]
+leading-[1.25rem]
+uppercase
+py-[1rem]
+px-[2rem]
+"
+        />
+      </form>
+    </div>
+  );
+};
