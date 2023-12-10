@@ -1,5 +1,5 @@
-import luminaeTeam from "../../assets/images/about-us/team.png"
-
+import luminaeTeam from "../../assets/images/about-us/team.png";
+import quote from "../../assets/images/about-us/quote.svg"
 export const Intro = () => {
   return (
     <div>
@@ -92,15 +92,46 @@ leading-[1.7rem]"
           </p>
         </div>
       </section>
+
+      <section>
+        <div
+          className="
+        rounded-[8rem]
+bg-[#EAF3FB]
+        flex
+        justify-center
+      py-[1.6rem]
+      px-[1.25rem]
+        "
+        >
+          <img
+            src={quote}
+            alt="in quotes We have made many people satisfied with our Platform"
+          />
+        </div>
+
+        <article
+          className="text-[#555]
+text-center
+text-[1.25rem]
+font-[400]
+py-[1.6rem]
+px-[.8rem]
+rounded-[10px]
+bg-[#EAF3FB]
+"
+        >
+          We have made many people satisfied with our Platform
+        </article>
+      </section>
     </div>
   );
 };
 
 export const TeamPhoto = () => {
-    
-    return (
-        <div>
-            <img src={luminaeTeam} alt="Luminae team" />
-        </div>
-    )
-}
+  return (
+    <div>
+      <img src={luminaeTeam} alt="Luminae team" />
+    </div>
+  );
+};
