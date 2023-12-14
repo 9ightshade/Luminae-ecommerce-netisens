@@ -4,6 +4,7 @@
 
 import { SignUp } from "./components/signup/signUp";
 import { SignIn } from "./components/signin/signIn";
+import { Changepassword } from "./components/signup/forgotten";
 
 // import { Services } from "./components/aboutUs/services";
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <TeamPhoto />
       <Services />
       <Concerns /> */}
-<SignIn/>       <SignUp/>
+      <SignIn />       <SignUp />
+      <Changepassword/>
 
     </div>
   );

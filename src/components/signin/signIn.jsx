@@ -3,41 +3,17 @@ import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 export const SignIn = () => {
   return (
     <form action="POST">
-      <h1
-        className="   
-text-[#000]
-text-[1.25rem]
-font-[600]
-"
-      >
+      <h1 className="text-[#000] text-[1.25rem] font-[600]" >
         Sign in
       </h1>
-      <label
-        htmlFor="email"
-        className="
-      text-[#262626]
-      text[.8rem]
-font-[400]
- "
-      >
+      
+      <label htmlFor="email" className="text-[#262626] text[.8rem] font-[400]">
         Email
       </label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Email address"
-        className="block "
-      />
-
-      <label
-        htmlFor="password"
-        className="
+      <input type="email" name="email" id="email" placeholder="Email address" className="block"/>
       
-text-[#262626]
-text-[.8rem]
-font-[400]"
-      >
+      
+      <label htmlFor="password" className="text-[#262626] text-[.8rem] font-[400]">
         Password
       </label>
       <input type="password" name="password" id="password" />
