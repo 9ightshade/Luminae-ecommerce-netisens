@@ -48,16 +48,18 @@ font-[400]"
             type="checkbox"
             name="checkbox"
             id="checkbox"
-            className="text-[#262626] text-[.5rem] font-[400]"/>
+            className="text-[#262626] text-[.5rem] font-[400]"
+          />
           Remember for 30 days
         </label>
 
-        <p className="text-[#4172DC] text-[12px] font-[400]">
-          Forgot password
-        </p>
+        <p className="text-[#4172DC] text-[12px] font-[400]">Forgot password</p>
       </div>
 
-      <button type="submit" className="rounded-[4px] bg-[#4172DC] text-[#FFF] text-center text-[14px] font-[500] leading-[1.5rem] uppercase">
+      <button
+        type="submit"
+        className="rounded-[4px] focus:bg-[#4172DC] hover:bg-[#4172DC] bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] leading-[1.5rem] uppercase"
+      >
         sign in
       </button>
 
@@ -78,7 +80,7 @@ font-[400]"
         </span>
       </p>
 
-      <section className="flex" >
+      <section className="hidden md:flex">
         <img src={warningPolygon} alt="warning" />
         <p className="text-[#FF2E00] text-[14px] font-[400] leading-[1.5rem]">
           Sign up to save $9 for free shipping with Ausff company through
