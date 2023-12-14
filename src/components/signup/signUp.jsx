@@ -49,11 +49,7 @@ font-[400]"
 
       <label
         htmlFor="password"
-        className="
-            text-[#262626]
-      text[.8rem]
-font-[400]
-      "
+        className="text-[#262626] text[.8rem] font-[400]"
       >
         Password
       </label>
@@ -68,28 +64,14 @@ font-[400]
       <section className="flex">
         <input type="checkbox" name="" id="" />
         <p
-          className="
-text-[#262626]
-text-[12px]
-font-[400]
-leading-[1.25rem]
-        "
+          className="text-[#262626] text-[12px] font-[400] leading-[1.25rem]"
         >
           Terms and conditions agreement should start with an introduction that
           lets users know they’re reading a terms and conditions agreement
         </p>
       </section>
       <button
-        className="
-          rounded-[4px]
-bg-[#C4C4C4]
-text-[#FFF]
-text-center
-text-[14px]
-font-[500]
-leading-[1.5rem] 
-uppercase
-"
+        className="rounded-[4px] bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] leading-[1.5rem]  uppercase"
       >
         Sign up
       </button>
@@ -97,12 +79,7 @@ uppercase
       <section className="flex items-center justify-around ">
         <hr />
         <p
-          className="text-[#9D9D9D]
-text-center;
-text-[14px]
-font-[500]
-leading-[1.5rem]
-uppercase"
+          className="text-[#9D9D9D] text-center text-[14px] font-[500] leading-[1.5rem] uppercase"
         >
           OR
         </p>
