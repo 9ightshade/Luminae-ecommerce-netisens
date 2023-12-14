@@ -1,14 +1,20 @@
 // import { Logo } from "./components/shared/logo";
-import { Concerns } from "./components/aboutUs/concernsForm";
-import { Intro, TeamPhoto } from "./components/aboutUs/intro";
-import { Services } from "./components/aboutUs/services";
+// import { Concerns } from "./components/aboutUs/concernsForm";
+// import { Intro, TeamPhoto } from "./components/aboutUs/intro";
+
+import { SignUp } from "./components/signup/signUp";
+import { SignIn } from "./components/signin/signIn";
+
+// import { Services } from "./components/aboutUs/services";
 function App() {
   return (
     <div>
-      <Intro />
+      {/* <Intro />
       <TeamPhoto />
       <Services />
-      <Concerns />
+      <Concerns /> */}
+<SignIn/>       <SignUp/>
+
     </div>
   );
 }
