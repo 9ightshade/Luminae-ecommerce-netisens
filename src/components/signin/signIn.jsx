@@ -18,7 +18,7 @@ export const SignIn = () => {
       </label>
       <input type="password" name="password" id="password" />
 
-      <div>
+      <section className="flex items-center">
         <label htmlFor="checkbox">
           <input
             type="checkbox"
@@ -30,7 +30,7 @@ export const SignIn = () => {
         </label>
 
         <p className="text-[#4172DC] text-[12px] font-[400]">Forgot password</p>
-      </div>
+      </section>
 
       <button
         type="submit"
