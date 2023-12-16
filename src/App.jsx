@@ -1,13 +1,9 @@
-import { CartContent } from "./components/cardCheckout/CartContent";
-import { OrderSummary } from "./components/cardCheckout/OrderSummary";
-import { Recommendations } from "./components/cardCheckout/Recommendations";
+import { Checkout } from "./pages/Checkout";
 
 function App() {
   return (
     <div>
-      <CartContent />
-      <OrderSummary />
-      <Recommendations />
+      <Checkout />
     </div>
   );
 }

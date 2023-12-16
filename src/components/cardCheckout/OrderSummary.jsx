@@ -2,7 +2,7 @@ import warningpolygon from "../../assets/images/forms/warning-polygon.svg";
 import checkout from "../../assets/images/cartcheckout/checkout.svg";
 export const OrderSummary = () => {
     return (
-      <section>
+      <section  >
         <section className="bg-[#E9E9E9] py-[2em]  ">
           <section className="w-[60%] mx-[auto] flex flex-col space-y-[.6em] ">
             <h2 className="text-[#262626] text-[1rem] font-[700]">
@@ -64,15 +64,18 @@ export const OrderSummary = () => {
           </button>
         </section>
 
-        <form className="bg-[white] py-[2em] px-[2em]">
+        <form className="bg-[white] flex py-[2em] px-[2em] md:px-[0em]">
           <input
             type="text"
             name="couponcode"
             id="couponcode"
             placeholder="Enter coupon code"
-            className="rounded-[4px] border-[#7B7B7B] w-[50%] text-[2vmin] py-[.98em] px-[4em] border-[1px]"
+            className="rounded-[4px] border-[#7B7B7B]  w-[60%] lg:w-[260px] lg:px-[3.8em] text-[1rem] md:py-[.8em] md:px-[.4em] py-[1em] px-[3.8em] border-[1px]"
           />
-          <button type="submit" className=" py-[1em] px-[5em] w-[50%] rounded-[4px] bg-[#262626] text-[#FFF] text-[2vmin] font-[500] capitalize">
+          <button
+            type="submit"
+            className=" lg:w-[250px] py-[1em] px-[3.8em] md:py-[.8em] md:px-[1em] w-[50%] rounded-[4px] bg-[#262626] text-[#FFF] text-[1rem] font-[500] capitalize"
+          >
             Login and Apply code
           </button>
         </form>
