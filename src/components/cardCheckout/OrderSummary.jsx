@@ -70,11 +70,11 @@ export const OrderSummary = () => {
             name="couponcode"
             id="couponcode"
             placeholder="Enter coupon code"
-            className="rounded-[4px] border-[#7B7B7B]  w-[60%] lg:w-[260px] lg:px-[3.8em] text-[1rem] md:py-[.8em] md:px-[.4em] py-[1em] px-[3.8em] border-[1px]"
+            className="rounded-[4px] border-[#7B7B7B]  w-[60%] lg:w-[260px] lg:px-[3.8em] text-[1rem] md:py-[.8em] md:px-[.4em] py-[1em] px-[1.7em] border-[1px]"
           />
           <button
             type="submit"
-            className=" lg:w-[250px] py-[1em] px-[3.8em] md:py-[.8em] md:px-[1em] w-[50%] rounded-[4px] bg-[#262626] text-[#FFF] text-[1rem] font-[500] capitalize"
+            className=" lg:w-[250px] py-[1em] px-[1.6em] md:py-[.8em] md:px-[1em] w-[50%] rounded-[4px] bg-[#262626] text-[#FFF] text-[1rem] font-[500] capitalize"
           >
             Login and Apply code
           </button>

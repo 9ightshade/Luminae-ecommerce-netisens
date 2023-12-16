@@ -40,7 +40,7 @@ export const Recommendations = () => {
               </p>
             </div>
 
-            <button className="flex gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
+            <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
               <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
               <p className="text-[#262626] text-[.8rem] font-[700]">
                 Add to cart
@@ -68,7 +68,7 @@ export const Recommendations = () => {
               </p>
             </div>
 
-            <button className="flex gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
+            <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
               <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
               <p className="text-[#262626] text-[.8rem] font-[700]">
                 Add to cart
@@ -96,7 +96,7 @@ export const Recommendations = () => {
               </p>
             </div>
 
-            <button className="flex gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
+            <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
               <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
               <p className="text-[#262626] text-[.8rem] font-[700]">
                 Add to cart
@@ -124,7 +124,7 @@ export const Recommendations = () => {
               </p>
             </div>
 
-            <button className="flex gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
+            <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
               <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
               <p className="text-[#262626] text-[.8rem] font-[700]">
                 Add to cart
