@@ -1,11 +1,11 @@
-import { Defaultlist, SearchFail } from "./components/Searchfail/Searchfail";
+import { CartContent } from "./components/cardCheckout/CartContent";
+
 
 function App() {
   return (
     <div>
-    
-      <SearchFail />
-      <Defaultlist/>
+<CartContent/>    
+   
     </div>
   );
 }

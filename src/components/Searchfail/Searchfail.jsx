@@ -3,7 +3,7 @@ import Warningpolygon from "../../assets/images/forms/warning-polygon.svg";
 export const SearchFail = () => {
   return (
     <div>
-      <div className="w-[80%] mx-[auto] md:flex items-center max-w-[900px]" >
+      <div className="w-[80%] mx-[auto] md:flex gap-[2em] items-center max-w-[900px]" >
         <div className="w-[50%] mx-[auto] max-w-[500px] ">
           <img src={noresult} alt="" className="w-[100%]" />
         </div>
