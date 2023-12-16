@@ -1,10 +1,11 @@
-import { SearchFail } from "./components/Searchfail/Searchfail";
+import { Defaultlist, SearchFail } from "./components/Searchfail/Searchfail";
 
 function App() {
   return (
     <div>
     
-<SearchFail/>
+      <SearchFail />
+      <Defaultlist/>
     </div>
   );
 }
