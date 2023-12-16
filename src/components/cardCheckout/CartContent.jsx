@@ -10,7 +10,7 @@ import trash from "../../assets/images/cartcheckout/trash.svg";
 
 export const CartContent = () => {
   return (
-    <section className="p-[2em]">
+    <section className="p-[2em] w-[90%] mx-[auto] ">
       <h1 className="text-[#262626] text-[1.2rem] mb-[1em] font-[700] leading-[1.5rem]">
         Card <span className="text-[#9D9D9D]  text-[1.1rem] font-[400]">3</span>
       </h1>
