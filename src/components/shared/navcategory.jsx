@@ -5,6 +5,7 @@ import { Language } from "./category/language";
 import { Signin } from "./category/signin";
 import { Favourite } from "./category/favourite";
 import { NavAds } from "./category/NavAds";
+
 export const NavCategory = () => {
   return (
     <div className="flex justify-around items-center py-2 px-5 text-[13px]">

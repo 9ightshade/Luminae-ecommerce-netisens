@@ -1,8 +1,8 @@
-import search from "../../assets/images/icons/header/Search.svg";
+import search from "../../assets/images/icons/header/Search.png";
 
 export const Search = () => {
   return (
-    <div className="p-[2em]">
+    <div className="p-[em]">
       <div className="flex relative md:max-lg:w-[350px] lg:w-[280px] ">
         <input
           type="text"

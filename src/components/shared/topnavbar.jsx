@@ -1,5 +1,5 @@
 import { Logo } from "../shared/logo";
-import hamburger from "../../assets/images/icons/header/Menueicon.svg";
+import hamburger from "../../assets/images/icons/header/Menue.svg";
 import { Cartbag } from "./cartbag";
 import { Search } from "./search";
 import { Aboutus } from "./aboutus";
