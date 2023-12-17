@@ -2,7 +2,7 @@ import warningpolygon from "../../assets/images/forms/warning-polygon.svg";
 import checkout from "../../assets/images/cartcheckout/checkout.svg";
 export const OrderSummary = () => {
     return (
-      <section  >
+      <section>
         <section className="bg-[#E9E9E9] py-[2em]  ">
           <section className="w-[60%] mx-[auto] flex flex-col space-y-[.6em] ">
             <h2 className="text-[#262626] text-[1rem] font-[700]">
@@ -74,7 +74,7 @@ export const OrderSummary = () => {
           />
           <button
             type="submit"
-            className=" lg:w-[250px] py-[1em] px-[1.6em] md:py-[.8em] md:px-[1em] w-[50%] rounded-[4px] bg-[#262626] text-[#FFF] text-[1rem] font-[500] capitalize"
+            className=" focus:bg-[#4172DC] lg:w-[250px] py-[1em] px-[1.6em] md:py-[.8em] md:px-[1em] w-[50%] rounded-[4px] bg-[#262626] text-[#FFF] text-[1rem] font-[500] capitalize"
           >
             Login and Apply code
           </button>
