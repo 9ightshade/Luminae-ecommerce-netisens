@@ -23,116 +23,119 @@ export const Recommendations = () => {
       </div>
 
       {/*recommendations section below */}
-      <section className="mt-[1em]">
-        <div className="flex gap-[2em]">
-          <div>
-            <img src={shortdress1} alt="" />
-          </div>
-          <div className="flex flex-col space-y-[1.2em] ">
-            <p className="text-[#262626] text-[.8rem] font-[400]">
-              SHORT PRINTED DRESS
-            </p>
-            <div className="flex gap-[1.5em] ">
-              <p className="text-[#FF2E00] text-[.8rem] font-[700]">$69.99</p>
-              <p className="text-[#555] text-[.8rem] font-[400]">$129.99</p>
-              <p className="text-[#FFF] text-[0.5rem] font-[600] p-[.6em] bg-[#FF2E00]">
-                - 40%
-              </p>
+
+      <div className="flex justify-between flex-wrap gap-[2em]">
+        <section className="mt-[1em] md:basis-[50%],grow ">
+          <div className="flex gap-[2em]">
+            <div>
+              <img src={shortdress1} alt="" />
             </div>
-
-            <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
-              <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
-              <p className="text-[#262626] text-[.8rem] font-[700]">
-                Add to cart
+            <div className="flex flex-col space-y-[1.2em] ">
+              <p className="text-[#262626] text-[.8rem] font-[400]">
+                SHORT PRINTED DRESS
               </p>
-            </button>
-          </div>
-        </div>
-      </section>
+              <div className="flex gap-[1.5em] ">
+                <p className="text-[#FF2E00] text-[.8rem] font-[700]">$69.99</p>
+                <p className="text-[#555] text-[.8rem] font-[400]">$129.99</p>
+                <p className="text-[#FFF] text-[0.5rem] font-[600] p-[.6em] bg-[#FF2E00]">
+                  - 40%
+                </p>
+              </div>
 
-      {/*second dress*/}
-      <section className="mt-[1em]">
-        <div className="flex gap-[2em]">
-          <div>
-            <img src={shortdress2} alt="" />
-          </div>
-          <div className="flex flex-col space-y-[1.2em] ">
-            <p className="text-[#262626] text-[.8rem] font-[400]">
-              SHORT PRINTED DRESS
-            </p>
-            <div className="flex gap-[1.5em] ">
-              <p className="text-[#FF2E00] text-[.8rem] font-[700]">$69.99</p>
-              <p className="text-[#555] text-[.8rem] font-[400]">$129.99</p>
-              <p className="text-[#FFF] text-[0.5rem] font-[600] p-[.6em] bg-[#FF2E00]">
-                - 40%
-              </p>
+              <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
+                <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
+                <p className="text-[#262626] text-[.8rem] font-[700]">
+                  Add to cart
+                </p>
+              </button>
             </div>
-
-            <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
-              <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
-              <p className="text-[#262626] text-[.8rem] font-[700]">
-                Add to cart
-              </p>
-            </button>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/*third dress*/}
-      <section className="mt-[1em]">
-        <div className="flex gap-[2em]">
-          <div>
-            <img src={shortdress3} alt="" />
-          </div>
-          <div className="flex flex-col space-y-[1.2em] ">
-            <p className="text-[#262626] text-[.8rem] font-[400]">
-              SHORT PRINTED DRESS
-            </p>
-            <div className="flex gap-[1.5em] ">
-              <p className="text-[#FF2E00] text-[.8rem] font-[700]">$69.99</p>
-              <p className="text-[#555] text-[.8rem] font-[400]">$129.99</p>
-              <p className="text-[#FFF] text-[0.5rem] font-[600] p-[.6em] bg-[#FF2E00]">
-                - 40%
-              </p>
+        {/*second dress*/}
+        <section className="mt-[1em] md:basis-[50%],grow ">
+          <div className="flex gap-[2em]">
+            <div>
+              <img src={shortdress2} alt="" />
             </div>
-
-            <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
-              <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
-              <p className="text-[#262626] text-[.8rem] font-[700]">
-                Add to cart
+            <div className="flex flex-col space-y-[1.2em] ">
+              <p className="text-[#262626] text-[.8rem] font-[400]">
+                SHORT PRINTED DRESS
               </p>
-            </button>
-          </div>
-        </div>
-      </section>
+              <div className="flex gap-[1.5em] ">
+                <p className="text-[#FF2E00] text-[.8rem] font-[700]">$69.99</p>
+                <p className="text-[#555] text-[.8rem] font-[400]">$129.99</p>
+                <p className="text-[#FFF] text-[0.5rem] font-[600] p-[.6em] bg-[#FF2E00]">
+                  - 40%
+                </p>
+              </div>
 
-      {/*fourth dress*/}
-      <section className="mt-[1em]">
-        <div className="flex gap-[2em]">
-          <div>
-            <img src={shortdress4} alt="" />
-          </div>
-          <div className="flex flex-col space-y-[1.2em] ">
-            <p className="text-[#262626] text-[.8rem] font-[400]">
-              SHORT PRINTED DRESS
-            </p>
-            <div className="flex gap-[1.5em] ">
-              <p className="text-[#FF2E00] text-[.8rem] font-[700]">$69.99</p>
-              <p className="text-[#555] text-[.8rem] font-[400]">$129.99</p>
-              <p className="text-[#FFF] text-[0.5rem] font-[600] p-[.6em] bg-[#FF2E00]">
-                - 40%
-              </p>
+              <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
+                <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
+                <p className="text-[#262626] text-[.8rem] font-[700]">
+                  Add to cart
+                </p>
+              </button>
             </div>
-
-            <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
-              <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
-              <p className="text-[#262626] text-[.8rem] font-[700]">
-                Add to cart
-              </p>
-            </button>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/*third dress*/}
+        <section className="mt-[1em] md:basis-[50%],grow ">
+          <div className="flex gap-[2em]">
+            <div>
+              <img src={shortdress3} alt="" />
+            </div>
+            <div className="flex flex-col space-y-[1.2em] ">
+              <p className="text-[#262626] text-[.8rem] font-[400]">
+                SHORT PRINTED DRESS
+              </p>
+              <div className="flex gap-[1.5em] ">
+                <p className="text-[#FF2E00] text-[.8rem] font-[700]">$69.99</p>
+                <p className="text-[#555] text-[.8rem] font-[400]">$129.99</p>
+                <p className="text-[#FFF] text-[0.5rem] font-[600] p-[.6em] bg-[#FF2E00]">
+                  - 40%
+                </p>
+              </div>
+
+              <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
+                <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
+                <p className="text-[#262626] text-[.8rem] font-[700]">
+                  Add to cart
+                </p>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/*fourth dress*/}
+        <section className="mt-[1em] md:basis-[50%],grow ">
+          <div className="flex gap-[2em]">
+            <div>
+              <img src={shortdress4} alt="" />
+            </div>
+            <div className="flex flex-col space-y-[1.2em] ">
+              <p className="text-[#262626] text-[.8rem] font-[400]">
+                SHORT PRINTED DRESS
+              </p>
+              <div className="flex gap-[1.5em] ">
+                <p className="text-[#FF2E00] text-[.8rem] font-[700]">$69.99</p>
+                <p className="text-[#555] text-[.8rem] font-[400]">$129.99</p>
+                <p className="text-[#FFF] text-[0.5rem] font-[600] p-[.6em] bg-[#FF2E00]">
+                  - 40%
+                </p>
+              </div>
+
+              <button className="flex items-center gap-[1em] rounded-[4px] border-[1px] border-[#7B7B7B] py-[.6em] px-[3em] ">
+                <p className="text-[#555] text-[.8rem] font-[400]">$39</p>
+                <p className="text-[#262626] text-[.8rem] font-[700]">
+                  Add to cart
+                </p>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
   );
 };

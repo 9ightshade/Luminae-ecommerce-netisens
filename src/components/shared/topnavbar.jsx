@@ -42,7 +42,7 @@ export const Topnav = () => {
         <NavCategory />
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden">
         <Productcategory />
       </div>
     </div>
