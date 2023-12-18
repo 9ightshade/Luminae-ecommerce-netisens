@@ -49,18 +49,18 @@ export const TrendingNewArrivals = () => {
           key={arrivals.id}
         >
           <div className="w-[357px] relative bg-white border-none md:w-[100%] ">
-            <div className="w-[100%] md:bg-right h-[auto] md:max-lg:w-[100%] md:flex md:m-auto">
+            <div className="w-[100%] h-[350px] md:bg-right md:max-lg:w-[100%] md:flex md:m-auto">
               <img
                 className="w-[100%] h-[100%] md:bg-cover md:bg-center md:bg-no-repeat object-cover block md:hidden "
                 src={arrivals.image1}
               />
               <img
-                className=" hidden md:max-lg:block object-cover bg-center "
+                className=" hidden md:max-lg:block h-[100%] object-cover bg-center "
                 src={arrivals.image2}
                 alt=""
               />
               <img
-                className=" hidden md:max-lg:hidden w-full lg:block object-cover bg-center "
+                className=" hidden md:max-lg:hidden h-[100%] w-full lg:block object-cover bg-center "
                 src={arrivals.image1}
                 alt=""
               />
