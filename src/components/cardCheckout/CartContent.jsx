@@ -7,6 +7,8 @@ import black from "../../assets/images/cartcheckout/black.svg";
 import minus from "../../assets/images/cartcheckout/Minus.svg";
 import plus from "../../assets/images/cartcheckout/Plus.svg";
 import trash from "../../assets/images/cartcheckout/trash.svg";
+import { PaymentType } from "./PaymentType";
+import { ShippingCompany } from "./ShippingCompany";
 
 export const CartContent = () => {
   return (
@@ -133,5 +135,87 @@ export const CartContent = () => {
         </div>
       </section>
     </section>
+  );
+};
+
+export const ConfirmProduct = () => {
+  return (
+    <div className="p-[2em]">
+      <h3 className="text-[#262626] hidden md:block text-[1.5rem] mb-[1em] font-[700]">
+        Confirmation{" "}
+      </h3>
+      <div className="bg-[#F5F5F5] flex flex-col gap-[2em] p-[2em]">
+        <p className="text-[#555] text-[1rem] font-[400]">Shopping items</p>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-[1em]">
+            <div>
+              <img src={twopiecemango} alt="two piece mango" />
+            </div>
+            <div>
+              <h3 className="text-[#262626] text-[.8rem] font-[700] leading-[1.2rem]">
+                2 Piece Mango set- Regular fit
+              </h3>
+              <div className="flex">
+                <p className="text-[#555] text-[.8rem] font-[400] leading[1.2rem]">
+                  Color:
+                </p>
+                <img src={yellow} alt="color" />
+              </div>
+            </div>
+          </div>
+          <p className="text-[#555] text-[.8rem] font-[400] leading-[1.2rem]">
+            $25.99
+          </p>
+        </div>
+
+        {/* second product display*/}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-[1em]">
+            <div>
+              <img src={twopieceblack} alt="two piece mango" />
+            </div>
+            <div>
+              <h3 className="text-[#262626] text-[.8rem] font-[700] leading-[1.2rem]">
+                2 Piece Mango set- Regular fit
+              </h3>
+              <div className="flex">
+                <p className="text-[#555] text-[.8rem] font-[400] leading[1.2rem]">
+                  Color:
+                </p>
+                <img src={black} alt="color black" />
+              </div>
+            </div>
+          </div>
+          <p className="text-[#555] text-[.8rem] font-[400] leading-[1.2rem]">
+            $25.99
+          </p>
+        </div>
+
+        {/* third product display*/}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-[1em]">
+            <div>
+              <img src={twopieceblue} alt="two piece blue" />
+            </div>
+            <div>
+              <h3 className="text-[#262626] text-[.8rem] font-[700] leading-[1.2rem]">
+                2 Piece Mango set- Regular fit
+              </h3>
+              <div className="flex">
+                <p className="text-[#555] text-[.8rem] font-[400] leading[1.2rem]">
+                  Color:
+                </p>
+                <img src={blue} alt="color" />
+              </div>
+            </div>
+          </div>
+          <p className="text-[#555] text-[.8rem] font-[400] leading-[1.2rem]">
+            $25.99
+          </p>
+        </div>
+      </div>
+      <PaymentType />
+      <ShippingCompany/>
+    </div>
   );
 };

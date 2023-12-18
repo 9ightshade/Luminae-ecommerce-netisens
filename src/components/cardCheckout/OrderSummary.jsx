@@ -4,7 +4,7 @@ export const OrderSummary = () => {
     return (
       <section>
         <section className="bg-[#E9E9E9] py-[2em]  ">
-          <section className="w-[60%] mx-[auto] flex flex-col space-y-[.6em] ">
+          <section className="w-[60%] mx-[auto] flex flex-col gap-[.6em] ">
             <h2 className="text-[#262626] text-[1rem] font-[700]">
               Order Summary
             </h2>
@@ -24,7 +24,9 @@ export const OrderSummary = () => {
               Discount Price
             </p>
             <div className="flex gap-[.4em] items-center">
-              <img src={warningpolygon} alt="warning" />
+              <div className="">
+                <img src={warningpolygon} alt="warning" className="w-[100%]" />
+              </div>
               <p className="text-[#FF2E00] text-[.8rem] font-[400]">
                 You must log in to use the discount code
               </p>
@@ -53,7 +55,10 @@ export const OrderSummary = () => {
           </section>
 
           <button className="w-[80%] flex items-center justify-center gap-[.6em] mx-[auto] mt-[2em] rounded-[4px] bg-[#434343] py-[.9em] ">
-            <img src={checkout} alt="" />
+            <div className="w-[.8em] max-w-[1em] " >
+              {" "}
+              <img src={checkout} alt="" className="w-[100%]" />
+            </div>
             <a
               href=""
               className="text-[#FFF] text-[.8rem] font-[500] uppercase"
@@ -70,11 +75,11 @@ export const OrderSummary = () => {
             name="couponcode"
             id="couponcode"
             placeholder="Enter coupon code"
-            className="rounded-[4px] border-[#7B7B7B]  w-[60%] lg:w-[260px] lg:px-[3.8em] text-[1rem] md:py-[.8em] md:px-[.4em] py-[1em] px-[1.7em] border-[1px]"
+            className="rounded-[4px] border-[#7B7B7B]  w-[60%]  lg:px-[3.8em] text-[1rem] md:py-[.8em] md:px-[.4em] py-[1em] px-[1.7em] border-[1px]"
           />
           <button
             type="submit"
-            className=" focus:bg-[#4172DC] lg:w-[250px] py-[1em] px-[1.6em] md:py-[.8em] md:px-[1em] w-[50%] rounded-[4px] bg-[#262626] text-[#FFF] text-[1rem] font-[500] capitalize"
+            className=" focus:bg-[#4172DC]  py-[1em] px-[1.6em] md:py-[.8em] md:px-[1em] w-[40%] rounded-[4px] bg-[#262626] text-[#FFF] text-[.8em] font-[500] capitalize"
           >
             Login and Apply code
           </button>
