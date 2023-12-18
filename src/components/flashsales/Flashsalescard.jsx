@@ -71,11 +71,11 @@ const productarray = [
 
 export const Flashsalescard = () => {
   return (
-    <div className="sm:max-md:flex sm:overflow-x-auto flex lg:flex lg:m-auto lg:justify-center md:max-lg:flex-wrap md:max-lg:justify-center ">
+    <div className="sm:max-md:flex overflow-x-auto flex lg:flex lg:m-auto lg:justify-center md:max-lg:flex-wrap md:max-lg:justify-center ">
       {productarray.map((item) => (
         <section
           key={item.id}
-          className="w-[200px] min-w-[200px] h-[380px] border border-none p-1 shadow rounded-xl m-2  md:max-lg:min-w-[370px] lg:w-[290px] "
+          className="w-[200px] min-w-[200px] h-[380px] border border-none p-1 shadow rounded-xl m-2  md:max-lg:w-[360px] lg:w-[290px] "
         >
           <div className="md:max-lg:flex md:max-lg:text-center md:max-lg:w-[100%] md:max-lg:justify-center mt-[20px]">
             <h2 className="text-neutral-400 font-bold text-center mt-2">

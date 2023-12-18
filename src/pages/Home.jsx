@@ -7,6 +7,7 @@ import tablethero from "../../src/assets/images/icons/header/tablethero.png";
 import { Tabletheadercard } from "../components/hero-section/tablethero";
 import { Laptopheader } from "../components/hero-section/laptophero";
 import { Flashsalescard } from "../components/flashsales/Flashsalescard";
+import { TrendingNewArrivals } from "../components/trendingmusthave/trendingmusthave";
 
 const image1 = headerimg1;
 const image2 = headerimg2;
@@ -42,11 +43,20 @@ export const Home = () => {
         shopnow="SHOP NOW"
         image={tabletheroimg}
       />
+      
       <div className="flex justify-between md:mx-[60px] my-[30px] items-center ">
         <h1 className="font-bold text-[22px]">Flash Sales</h1>
         <p>view all</p>
       </div>
-      <Flashsalescard/>
+
+      <Flashsalescard />
+
+      <div className="flex justify-between md:mx-[60px] my-[30px] items-center md:max-lg:p-[30px] ">
+        <h1 className="font-bold text-[22px]">Trending must-have</h1>
+        <p>view all</p>
+      </div>
+
+      <TrendingNewArrivals/>
     </div>
   );
 };
