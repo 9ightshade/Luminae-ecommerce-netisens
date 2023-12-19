@@ -2,29 +2,44 @@ import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 export const SignIn = () => {
   return (
-    <form action="POST">
-      <h1 className="text-[#000] text-[1.25rem] font-[600]" >
+    <form action="POST" className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] ">
+      <h1 className="text-[#000] text-[1.25rem] mb-[1em] font-[600]">
         Sign in
       </h1>
-      
+
       <label htmlFor="email" className="text-[#262626] text[.8rem] font-[400]">
         Email
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email address"
+          className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
+        />
       </label>
-      <input type="email" name="email" id="email" placeholder="Email address" className="block"/>
-      
-      
-      <label htmlFor="password" className="text-[#262626] text-[.8rem] font-[400]">
-        Password
-      </label>
-      <input type="password" name="password" id="password" />
 
-      <section className="flex items-center">
-        <label htmlFor="checkbox">
+      <label
+        htmlFor="password"
+        className="text-[#262626] text-[.8rem] font-[400]"
+      >
+        Password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          className="block rounded-[4px] border-[#D9D9D9] p-[.7em] border-[1px] w-[100%]"
+        />
+      </label>
+
+      <section className="flex items-center justify-between">
+        <label
+          htmlFor="checkbox"
+          className="text-[#262626] flex items-center gap-[.6em] text-[.9rem] font-[400]">
           <input
             type="checkbox"
             name="checkbox"
             id="checkbox"
-            className="text-[#262626] text-[.5rem] font-[400]"
+            className=""
           />
           Remember for 30 days
         </label>
@@ -34,7 +49,7 @@ export const SignIn = () => {
 
       <button
         type="submit"
-        className="rounded-[4px] focus:bg-[#4172DC] hover:bg-[#4172DC] bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] leading-[1.5rem] uppercase"
+        className="rounded-[4px] w-[100%] focus:bg-[#4172DC] hover:bg-[#4172DC] bg-[#C4C4C4] text-[#FFF] text-center text-[.8rem] font-[500] p-[1em] uppercase"
       >
         sign in
       </button>
@@ -49,14 +64,14 @@ export const SignIn = () => {
 
       <Googlesign />
 
-      <p className="text-[#262626] md:hidden text-[14px] font-[500] leading-[1.5rem] lowercase">
+      <p className="text-[#262626] text-[.8rem] font-[500] text-center lowercase">
         Don’t have an account?
         <span className="text-[#FF7A00] text-[16px] font-[700] leading-[1.5rem] lowercase">
           Sign Up
         </span>
       </p>
 
-      <section className="hidden md:flex">
+      <section className="hidden ">
         <img src={warningPolygon} alt="warning" />
         <p className="text-[#FF2E00] text-[14px] font-[400] leading-[1.5rem]">
           Sign up to save $9 for free shipping with Ausff company through
@@ -73,7 +88,7 @@ export const Googlesign = () => {
     return (
       <div>
         <button
-          className="flex rounded-[4px] text-[#FFF] text-center text-[14px] font-[500] leading-[1.25rem] lowercase bg-[#434343]"
+          className="flex justify-center items-center p-[1em] gap-[.8em] rounded-[4px] text-[#FFF] text-[.8rem] font-[500] w-[100%] lowercase bg-[#434343]"
         >
           <img src={googleLogo} alt="google logo" />
           <p>Sign in by google</p>

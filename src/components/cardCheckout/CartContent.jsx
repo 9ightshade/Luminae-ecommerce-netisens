@@ -140,7 +140,7 @@ export const CartContent = () => {
 
 export const ConfirmProduct = () => {
   return (
-    <div className="p-[2em]">
+    <div className="px-[2em] mb-[5em] ">
       <h3 className="text-[#262626] hidden md:block text-[1.5rem] mb-[1em] font-[700]">
         Confirmation{" "}
       </h3>

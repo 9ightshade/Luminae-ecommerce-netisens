@@ -2,7 +2,10 @@ import { Googlesign } from "../signin/signIn";
 
 export const SignUp = () => {
   return (
-    <form>
+    <form
+      action="POST"
+      className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto]"
+    >
       <h1
         className="
             text-[#000]
