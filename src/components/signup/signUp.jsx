@@ -1,5 +1,6 @@
 import { Googlesign } from "../signin/signIn";
-
+// import emailvector from "../../assets/images/forms/email_bg.svg"
+import confetti from "../../assets/images/forms/confetti.png"
 export const SignUp = () => {
   return (
     <form
@@ -9,9 +10,8 @@ export const SignUp = () => {
       <h1
         className="
             text-[#000]
-            text-[20px]
-font-[700]
-leading-[1.5rem]"
+            text-[20px] mb-[2em]
+font-[700]"
       >
         Sign up
       </h1>
@@ -25,14 +25,14 @@ font-[400]
       "
       >
         Name
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Full name"
+          className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
+        />
       </label>
-      <input
-        type="text"
-        name="username"
-        id="username"
-        placeholder="Full name"
-        className="block"
-      />
 
       <label
         htmlFor="email"
@@ -41,37 +41,37 @@ font-[400]
 font-[400]"
       >
         Email
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email address"
+          className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
+        />
       </label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Email address"
-        className="block"
-      />
 
       <label
         htmlFor="password"
         className="text-[#262626] text[.8rem] font-[400]"
       >
         Password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+          className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
+        />
       </label>
-      <input
-        type="password"
-        name="password"
-        id="password"
-        placeholder="password"
-        className="block"
-      />
 
-      <section className="flex">
+      <section className="flex gap-[.6em]">
         <input type="checkbox" name="" id="" />
-        <p className="text-[#262626] text-[12px] font-[400] leading-[1.25rem]">
+        <p className="text-[#262626] text-[12px] font-[400]">
           Terms and conditions agreement should start with an introduction that
           lets users know they’re reading a terms and conditions agreement
         </p>
       </section>
-      <button className="rounded-[4px] focus:bg-[#4172DC] hover:bg-[#4172DC] bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] leading-[1.5rem]  uppercase">
+      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase">
         Sign up
       </button>
 
@@ -84,6 +84,27 @@ font-[400]"
       </section>
 
       <Googlesign />
+      {/* <SignUpModal/> */}
     </form>
   );
 };
+
+
+export const SignUpModal = () => {
+  return (
+    <div className="w-[90%]  mx-auto text-center max-w-[500px] rounded-[8px] bg-[#7c6969]">
+      <div className="mx-[auto] w-[25%]">
+        <img src={confetti} alt="" className="w-[100%]" />
+      </div>
+      <p className="text-[#262626] text-[1.2rem] font-[700]">
+        Check Your Email
+      </p>
+      <p className="text-[grey] text-[1rem] font-[600]">
+        We have just sent you your new confirmation email to complete your
+        registration to{" "}
+      </p>
+      <p className="text-[black] text-[1.2rem] font-[700]" >Saina.ghasemi@gmail.com.</p>
+    </div>
+  );
+  
+}

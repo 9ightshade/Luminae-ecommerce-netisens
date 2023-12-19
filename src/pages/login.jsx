@@ -1,6 +1,7 @@
 import { Topnav } from "../components/shared/topnavbar"
-import { SignIn } from "../components/signin/signIn"
-import { SignUp } from "../components/signup/signUp"
+// import { SignIn } from "../components/signin/signIn"
+import { Changepassword } from "../components/signup/forgotten"
+// import { SignUp } from "../components/signup/signUp"
 
 export const LoginPage = ()=>{
 
@@ -9,7 +10,7 @@ export const LoginPage = ()=>{
         <div>
             <Topnav />
             {/* <SignIn/> */}
-            <SignUp/>
+            <Changepassword/>
 </div>
 
 
