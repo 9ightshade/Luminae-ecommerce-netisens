@@ -5,6 +5,7 @@ import musthaveformobile2 from "../../assets/images/trendingmusthave/musthavefor
 import musthavefortablet2 from "../../assets/images/trendingmusthave/musthavefortablet2.png";
 import musthaveformobile3 from "../../assets/images/trendingmusthave/musthaveformobile3.png";
 import musthavefortablet3 from "../../assets/images/trendingmusthave/musthavefortablet3.png";
+import newarrivals from "../../assets/images/icons/header/newarrivals.svg";
 
 const newarrivalsArray = [
   {
@@ -42,10 +43,10 @@ const newarrivalsArray = [
 
 export const TrendingNewArrivals = () => {
   return (
-    <div className="flex md:max-lg:block md:justify-center overflow-x-auto items-center">
+    <div className="flex md:max-lg:block md:justify-center overflow-x-auto items-center ">
       {newarrivalsArray.map((arrivals) => (
         <div
-          className="m-[15px] w-[357px] md:max-lg:w-[80%] md:max-lg:block md:max-lg:mx-auto lg:w-[380px] flex-col justify-start items-center sm:max-md:flex   "
+          className="mr-[15px] w-[357px] md:max-lg:w-[80%] md:max-lg:block md:max-lg:mx-auto lg:w-[380px] flex-col justify-start items-center sm:max-md:flex   "
           key={arrivals.id}
         >
           <div className="w-[357px] relative bg-white border-none md:w-[100%] ">
@@ -68,7 +69,7 @@ export const TrendingNewArrivals = () => {
             <div className="p-2.5 left-0 top-0 absolute  ">
               <div className="px-1.5 py-[3px] bg-emerald-600 rounded  ">
                 <div className="justify-center items-center gap-1 flex">
-                  <div className="w-4 h-4 relative"></div>
+                  <img src={newarrivals} alt="" className="w-4 h-4 relative" />
                   <div className="text-white text-[12px] font-normal ">
                     {arrivals.arrival}
                   </div>

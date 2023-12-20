@@ -70,7 +70,7 @@ const tophundredArray = [
 
 export const Tophundredproduct = () => {
   return (
-    <div className="flex overflow-x-auto md:max-lg:flex-wrap md:justify-center lg:mx-[20px]">
+    <div className="flex overflow-x-auto lg:overflow-x-none md:max-lg:flex-wrap md:justify-center lg:mx-[20px]">
       {tophundredArray.map((tophundred) => (
         <div
           className=" min-w-[250px] sm:max-md:block border-none p-1 shadow rounded-xl m-2 lg:w-[250px] flex-col justify-start 
