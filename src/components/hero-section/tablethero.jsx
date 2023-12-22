@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Tabletheadercard = ({heading, paragraph, shopnow, image}) => {
   return (
     <>

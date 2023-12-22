@@ -1,25 +1,16 @@
-import trendyGirls from "../../assets/images/about-us/trendy-girls.png"
+import trendyGirls from "../../assets/images/about-us/trendy-girls.png";
 
 export const Concerns = () => {
   return (
-    <div className="bg-[#262626]">
-      <h1
-        className="text-white
-text-[2rem]
-font-[700]
-leading-[1.25rem]"
-      >
-        Tell us about your{" "}
-        <span
-          className="text-[#FFC94B]
-text-[2rem]
-font-[700]
-leading-[1.25rem]"
-        >
-          Concerns
-        </span>
-      </h1>
-      <section>
+    <div className="bg-[#262626] flex w-[95%] mx-auto ">
+      <div className="py-[1em] px-[1em] basis-1/2 border border-yellow-400">
+        <h1 className="text-white text-[7vmin] font-[700]">
+          Tell us about your{" "}
+          <span className="text-[#FFC94B] text-[2rem] font-[700]">
+            Concerns
+          </span>
+        </h1>
+
         <form action="" method="post">
           <label
             htmlFor="name"
@@ -74,12 +65,11 @@ px-[2rem]
 "
           />
         </form>
+      </div>
 
-
-        <div>
-          <img src={trendyGirls} alt="trendy girls" />
-        </div>
-      </section>
+      <div className="basis-1/2">
+        <img src={trendyGirls} alt="trendy girls" className="w-[100%]" />
+      </div>
     </div>
   );
 };
