@@ -2,7 +2,7 @@ import warningpolygon from "../../assets/images/forms/warning-polygon.svg";
 import checkout from "../../assets/images/cartcheckout/checkout.svg";
 export const OrderSummary = () => {
     return (
-      <section>
+      <section className="" >
         <section className="bg-[#E9E9E9] py-[2em]  ">
           <section className="w-[60%] mx-[auto] flex flex-col gap-[.6em] ">
             <h2 className="text-[#262626] text-[1rem] font-[700]">

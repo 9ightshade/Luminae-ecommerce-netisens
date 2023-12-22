@@ -5,6 +5,7 @@ import { NavCheckout } from "../components/cardCheckout/Navcheckout";
 import { OrderSummary } from "../components/cardCheckout/OrderSummary";
 import { Recommendations } from "../components/cardCheckout/Recommendations";
 import { PaymentMethod, Shipping } from "../components/cardCheckout/Shipping";
+import { Footer } from "../components/footer/footer";
 import { Topnav } from "../components/shared/topnavbar";
 
 export const Checkout = () => {
@@ -30,6 +31,10 @@ export const Checkout = () => {
         </div>
       </div>
       <Recommendations />
+      <Footer/>
     </div>
+
+
+  
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import rightarrow from "../../src/assets/images/icons/header/rightarrow.svg";
 import leftarrow from "../../src/assets/images/icons/header/leftarrow.svg";
 import sliderImg from "../../src/assets/images/icons/header/sliderImg.png";

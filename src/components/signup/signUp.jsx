@@ -5,7 +5,7 @@ export const SignUp = () => {
   return (
     <form
       action="POST"
-      className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto]"
+      className="w-[94%] max-w-[700px] py-[4em] relative space-y-[1em] mx-[auto]"
     >
       <h1
         className="
@@ -15,7 +15,6 @@ font-[700]"
       >
         Sign up
       </h1>
-
       <label
         htmlFor="username"
         className="
@@ -84,7 +83,9 @@ font-[400]"
       </section>
 
       <Googlesign />
-      {/* <SignUpModal/> */}
+    
+        <SignUpModal />
+
     </form>
   );
 };
@@ -92,8 +93,8 @@ font-[400]"
 
 export const SignUpModal = () => {
   return (
-    <div className="w-[90%]  mx-auto text-center max-w-[500px] rounded-[8px] bg-[#7c6969]">
-      <div className="mx-[auto] w-[25%]">
+    <div className=" hidden w-[90%] py-[6em] px-[3em] md:w-[80%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto text-center max-w-[500px] rounded-[8px] bg-white">
+      <div className="mx-[auto] w-[20%]">
         <img src={confetti} alt="" className="w-[100%]" />
       </div>
       <p className="text-[#262626] text-[1.2rem] font-[700]">
@@ -103,7 +104,9 @@ export const SignUpModal = () => {
         We have just sent you your new confirmation email to complete your
         registration to{" "}
       </p>
-      <p className="text-[black] text-[1.2rem] font-[700]" >Saina.ghasemi@gmail.com.</p>
+      <p className="text-[black] text-[1.2rem] font-[700]">
+        Saina.ghasemi@gmail.com.
+      </p>
     </div>
   );
   

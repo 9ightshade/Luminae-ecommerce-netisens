@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar } from "../components/shared/navbar";
 import { MobileHero } from "../components/hero-section/mobilehero";
 import headerimg1 from "../../src/assets/images/icons/header/HeaderImg1.png";
