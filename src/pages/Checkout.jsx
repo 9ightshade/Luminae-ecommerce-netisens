@@ -13,8 +13,8 @@ export const Checkout = () => {
     <div>
       <Topnav />
       <NavCheckout />
-      <div className="md:flex justify-center items-start gap-[2em] p-[2em] ">
-        <div className="basis-[70%] md:flex">
+      <div className="md:flex items-start justify-between border border-black gap-[2em] p-[2em] ">
+        <div className="basis-[50%] border border-black md:flex">
           {/* <ConfirmProduct/> */}
           <div className="basis-[50%]">
             {" "}
@@ -25,7 +25,7 @@ export const Checkout = () => {
           </div>
         </div>
 
-        <div className="basis-[30%]" >
+        <div className="basis-[50%] border border-black" >
           {" "}
           <OrderSummary />
         </div>
