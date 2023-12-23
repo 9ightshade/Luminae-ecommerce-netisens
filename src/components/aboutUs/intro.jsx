@@ -2,7 +2,7 @@ import luminaeTeam from "../../assets/images/about-us/team.png";
 import quote from "../../assets/images/about-us/quote.svg"
 export const Intro = () => {
   return (
-    <div className="md:flex items-center px-[1em] py-[2em] justify-around" >
+    <div className="md:flex items-center md:w-[80%]  px-[1em] mx-auto py-[2em] justify-between" >
       <div className="basis-[50%]" >
         <p className="text-[#262626] text-[1.3rem] font-[400]">
           Let&#39;s get to know Luminae

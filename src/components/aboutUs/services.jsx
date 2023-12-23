@@ -6,9 +6,9 @@ import arrowRight from "../../assets/images/about-us/arrow-right.svg";
 import luminaeteam from "../../assets/images/about-us/team.png"
 export const Services = () => {
   return (
-    <div className="flex-row-reverse md:flex justify-center px-[1em] ">
+    <div className="flex-row-reverse md:w-[80%] mx-[auto] md:flex justify-between">
       <div className=" md:basis-[50%] md:max-w-[430px]">
-        <img src={luminaeteam} alt="" className="w-[100%]" />
+        <img src={luminaeteam} alt="" className="w-[100%] h-[100%]" />
       </div>
 
       <div
@@ -44,7 +44,7 @@ export const Services = () => {
               Explore our comprehensive online store where you'll find a diverse
               range of products ...
             </article>
-            <button className="  rounded-[4px] bg-[#4172DC] flex py-[.8em] px-[.8em] mt-[1em] mx-auto gap-[.7em] items-center">
+            <button className=" transition-all active:bg-[#417cfb] rounded-[4px] bg-[#4172DC] flex py-[.8em] px-[.8em] mt-[1em] mx-auto gap-[.7em] items-center">
               <a
                 href="#"
                 className=" text-white text-[.8rem] font-[700] uppercase"
@@ -66,7 +66,7 @@ export const Services = () => {
               Experience unparalleled savings on a wide selection of premium
               products enhance...
             </article>
-            <button className="  rounded-[4px] bg-[#4172DC] flex py-[.8em] px-[.8em] mt-[1em] mx-auto justify-space-between gap-[.7rem] items-center">
+            <button className=" transition-all active:bg-[#417cfb] rounded-[4px] bg-[#4172DC] flex py-[.8em] px-[.8em] mt-[1em] mx-auto justify-space-between gap-[.7rem] items-center">
               <a
                 href="#"
                 className=" text-white text-[.8rem] font-[700] leading-[1.3rem] uppercase"
@@ -92,7 +92,7 @@ export const Services = () => {
               Enjoy the convenience of free cargo services, ensuring your
               purchases are delivere to your...
             </article>
-            <button className="rounded-[4px] bg-[#4172DC] flex py-[.8em] px-[.8em] gap-[.7rem] items-center mt-[1em] mx-auto ">
+            <button className="rounded-[4px] bg-[#4172DC] transition-all active:bg-[#417cfb] flex py-[.8em] px-[.8em] gap-[.7rem] items-center mt-[1em] mx-auto ">
               <a
                 href="#"
                 className=" text-white text-[.8rem] font-[700] leading-[1.3rem] uppercase"
@@ -118,7 +118,7 @@ export const Services = () => {
               Our commitment to exceptional customer means our 24 hour customer
               service is available...
             </article>
-            <button className="rounded-[4px] bg-[#4172DC] mx-auto flex mt-[1em] py-[.8em] px-[.8em] gap-[.7em] items-center ">
+            <button className="rounded-[4px] bg-[#4172DC] transition-all active:bg-[#417cfb] mx-auto flex mt-[1em] py-[.8em] px-[.8em] gap-[.7em] items-center ">
               <a
                 href="#"
                 className=" text-white text-[.8rem] font-[700] leading-[1.3rem] uppercase"
