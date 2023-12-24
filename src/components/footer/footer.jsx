@@ -1,7 +1,12 @@
+import { Newsletteremail } from "../newsletter/newletteremail";
+
 export const Footer = () => {
   return (
     <div>
-      <div className="m-0 mt-[50px] gap-4 justify-center text-left md:pt-[180px] px-[40px] bg-[#D1E2EB] lg:flex lg:items-center pb-[30px] md:max-lg:pb-[0px]">
+      <div className="m-0 mt-[50px] gap-4 justify-center text-left md:pt-[180px] px-[40px] relative bg-[#D1E2EB] lg:flex lg:items-center pb-[30px] md:max-lg:pb-[0px]">
+        <div className="">
+          <Newsletteremail />
+        </div>
         <div className=" items-center justify-center gap-[50px] flex pt-[50px] md:pt-0">
           <div className="w-[200px] text-gray-600">
             <p className="pb-[10px] font-bold text-black">Company</p>

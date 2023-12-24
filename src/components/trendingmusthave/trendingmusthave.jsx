@@ -46,7 +46,7 @@ export const TrendingNewArrivals = () => {
     <div className="flex md:max-lg:block md:justify-center overflow-x-auto items-center ">
       {newarrivalsArray.map((arrivals) => (
         <div
-          className="mr-[15px] w-[357px] md:max-lg:w-[80%] md:max-lg:block md:max-lg:mx-auto lg:w-[380px] flex-col justify-start items-center sm:max-md:flex   "
+          className="mr-[15px] w-[357px] md:max-lg:w-[80%] md:max-lg:block md:max-lg:mx-auto lg:w-[380px] flex-col justify-start items-center sm:max-md:flex md:mb-6  "
           key={arrivals.id}
         >
           <div className="w-[357px] relative bg-white border-none md:w-[100%] ">

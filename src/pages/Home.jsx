@@ -5,7 +5,7 @@ import headerimg2 from "../../src/assets/images/icons/header/HeaderImg2.png";
 import finegirl from "../../src/assets/images/icons/header/finegirl.png";
 import tablethero from "../../src/assets/images/icons/header/tablethero.png";
 import { Tabletheadercard } from "../components/hero-section/tablethero";
-import pinkbarbie from "../../src/assets/images/icons/header/pinkbarbie.png"
+import pinkbarbie from "../../src/assets/images/icons/header/pinkbarbie.png";
 import { Laptopheader } from "../components/hero-section/laptophero";
 import { Flashsalescard } from "../components/flashsales/Flashsalescard";
 import { TrendingNewArrivals } from "../components/trendingmusthave/trendingmusthave";
@@ -17,7 +17,7 @@ import { Newsletteremail } from "../components/newsletter/newletteremail";
 const image1 = headerimg1;
 const image2 = headerimg2;
 const image3 = finegirl;
-const image4 = pinkbarbie
+const image4 = pinkbarbie;
 const tabletheroimg = tablethero;
 
 export const Home = () => {
@@ -77,7 +77,7 @@ export const Home = () => {
         <TrendingNewArrivals />
       </div>
 
-      <div className="flex justify-between md:mx-[60px]items-center md:max-lg:p-[30px] p-[20px] md:p-0">
+      <div className="flex justify-between md:mx-[60px] items-center my-[30px] md:max-lg:p-[30px] p-[20px] md:p-0">
         <h1 className="font-bold text-[22px]">Top 100</h1>
         <p>view all</p>
       </div>
@@ -121,11 +121,6 @@ export const Home = () => {
           color="bg-sky-600"
         />
       </div>
-
-      <div className=" m-auto block ">
-        <Newsletteremail /> 
-      </div>
-
       <Footer />
     </div>
   );
