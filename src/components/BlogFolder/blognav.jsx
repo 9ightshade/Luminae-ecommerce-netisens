@@ -12,6 +12,20 @@ export const Blognav = () => {
         <Logo text="Blog" />
         <BlogSocialMedia />
       </div>
+
+      <div className="items-center justify-between mt-[40px] md:flex hidden mb-[30px] mx-4 ">
+        <Logo text="Luminae" />
+
+        <ul className='flex justify-between gap-6 text-[#939699]'>
+          <li>News</li>
+          <li>Fashion</li>
+          <li>Health</li>
+          <li>Tech</li>
+          <li>Science</li>
+        </ul>
+
+        <BlogSocialMedia />
+      </div>
     </div>
   );
 }

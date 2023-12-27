@@ -10,5 +10,12 @@
 hr{
   width:40%;
 height: 1px;
-background: #D9D9D9);
+background: #D9D9D9;
+}
+
+.blogheroTb{
+  background-image: url("../src/assets/images/blog-images/blogheroTB.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
