@@ -5,6 +5,7 @@ import { Language } from "./category/language";
 import { Signin } from "./category/signin";
 import { Favourite } from "./category/favourite";
 import { NavAds } from "./category/NavAds";
+import { NavLink } from "react-router-dom";
 
 export const NavCategory = () => {
   return (
@@ -20,7 +21,7 @@ export const NavCategory = () => {
         <NavAds />
       </div>
 
-      <Signin />
+     <Signin />
       <Favourite />
       <Cartbag />
     </div>

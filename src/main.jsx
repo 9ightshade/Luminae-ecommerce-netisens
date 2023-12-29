@@ -10,6 +10,8 @@ import { Blog } from './pages/Blog.jsx';
 import { Home } from './pages/Home.jsx';
 import { SearchFail } from './components/Searchfail/Searchfail.jsx';
 import { Error } from './pages/Error.jsx';
+import { About } from './pages/About.jsx';
+import { LoginPage } from './pages/login.jsx';
 
 
 const router = createBrowserRouter([
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: "/Blog",
     element: <Blog/>
+  },
+  {
+    path: "/About",
+    element: <About/>
+  },
+  {
+    path: "/SignIn",
+    element: <LoginPage/>
   },
    {
     path: "*",
