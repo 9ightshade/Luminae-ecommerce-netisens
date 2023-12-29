@@ -10,6 +10,8 @@ import { BlogTopFooter } from "../components/BlogFolder/Blog footer/BlogTopFoote
 import { BlogBottomFooter } from "../components/BlogFolder/Blog footer/BlogBottomFooter";
 import { BlogHeroTB } from "../components/BlogFolder/BlogHeroTB";
 import { Blogreview } from "../components/BlogFolder/Blogreview";
+import { BlogHeroLg } from "../components/BlogFolder/BlogHeroLg";
+import { BlogAboutTech2 } from "../components/BlogFolder/stylish-woman-in-summer/BlogAboutTech2";
 
 export const Blog = () => {
   return (
@@ -17,19 +19,29 @@ export const Blog = () => {
       <Blognav />
       <BlogHeroMb />
       <BlogHeroTB />
+      <BlogHeroLg />
 
       <div className="p-[20px]">
         <div>
-          <Stylishwoman />
-          <div className="flex justify-start md:justify-start gap-3  mt-3  ">
-            <BlogAboutFashion />
-            <BlogAboutTech />
+          <div className="flex gap-2 md:justify-center">
+            <div>
+              <Stylishwoman />
+              <div className="flex justify-start md:justify-start gap-3  mt-3  ">
+                <BlogAboutFashion />
+                <BlogAboutTech />
+                <BlogAboutTech2 />
+              </div>
+            </div>
+            <div className="">
+              <Blogreview />
+              <Blogreview />
+              <Blogreview />
+              <Blogreview />
+            </div>
           </div>
 
-          <div className="flex justify-center md:justify-start gap-3  mt-3 ">
+          <div className="flex justify-center md:justify-start gap-3  mt-3 "></div>
 
-          </div>
-          
           <UnveilingTimeless />
           <BlogGallery />
         </div>
@@ -38,6 +50,7 @@ export const Blog = () => {
       <div className="">
         <BlogTopFooter />
         <BlogBottomFooter />
+       
       </div>
     </div>
   );

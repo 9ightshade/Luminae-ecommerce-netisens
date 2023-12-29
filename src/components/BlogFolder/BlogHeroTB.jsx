@@ -7,7 +7,7 @@ import heart from "../../assets/images/blog-images/Heart.png";
 
 export const BlogHeroTB = () => {
   return (
-    <div className="blogheroTb hidden md:flex items-start py-[40px]">
+    <div className="blogheroTb hidden md:max-lg:flex items-start py-[40px]">
       <div className="my-[80px] ml-[50px] mr-[30px] ">
         <img src={bookmark} alt="" />
       </div>

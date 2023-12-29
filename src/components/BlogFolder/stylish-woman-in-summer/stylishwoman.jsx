@@ -7,20 +7,29 @@ import blondhairimg2 from "../../../assets/images/blog-images/blondHairImg2.png"
 
 export const Stylishwoman = () => {
   return (
-    <div className="flex gap-2 ">
+    <div className="flex gap-2 md:max-lg:h-[300px]">
       <div className="inline-flex  ">
-        <div className=" p-[5px] w-[159px] bg-gradient-to-b from-gray-200 via-gray-200 to-zinc-300 pl-2">
-          <p className="text-[12px] font-bold w-[160px] py-2  ">
+        <div className=" p-[5px] w-[159px] md:max-lg:w-[200px] bg-gradient-to-b from-gray-200 via-gray-200 to-zinc-300 pl-2">
+          <p className="text-[12px] font-bold w-[160px] md:max-lg:text-[16px] md:max-lg:w-[156px] md:max-lg:mt-[15px] py-2  ">
             Stylish woman in summer outfit isolated posing in fashion trend
             isolated
           </p>
-          <p className="text-[9px] font-bold w-[128.px] text-gray-600 ">
+          <p className="text-[9px] font-bold md:max-lg:font-medium text-gray-600 md:max-lg:text-[12px] block lg:hidden ">
             In this captivating scene, a stylish woman stands confidently
             against a pristine backdrop, capturing the essence of summer's
             allure. Bathed in the gentle...
           </p>
 
-          <div className="flex gap-1 items-center bg-blue-500 text-[10px] rounded w-[100px] px-[3px] py-[4px] text-white mt-[5px]">
+          <p className="text-[9px] font-bold w-[128.px] text-gray-600 md:max-lg hidden lg:block ">
+            In this captivating scene, a stylish woman stands confidently
+            against a pristine backdrop, capturing the essence of summer's
+            allure. Bathed in the gentle sunlight, she emanates an air of
+            effortless chic. Her outfit is a harmonious blend of contemporary
+            trends and timeless elegance, perfectly attuned to the vibrant
+            season.
+          </p>
+
+          <div className="flex gap-1 items-center justify-center bg-blue-500 text-[10px] rounded w-[110px] px-[3px] py-[4px] text-white mt-[15px]">
             <p>READ MORE</p>
             <img src={rightarrow} alt="arrow right" />
           </div>

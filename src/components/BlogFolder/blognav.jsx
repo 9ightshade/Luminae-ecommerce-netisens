@@ -13,7 +13,7 @@ export const Blognav = () => {
         <BlogSocialMedia />
       </div>
 
-      <div className="items-center justify-between mt-[40px] md:flex hidden mb-[30px] mx-4 ">
+      <div className="items-center justify-between mt-[40px] md:flex hidden mb-[30px] mx-4 w-[100]">
         <Logo text="Luminae" />
 
         <ul className='flex justify-between gap-6 text-[#939699]'>

@@ -3,11 +3,11 @@ import React from 'react'
 export const UnveilingTimeless = () => {
   return (
     <div className='justify-end'>
-      <p className="w-[405px] md:w-full text-neutral-800 text-xl md:text-[17px] font-bold  uppercase leading-loose border-l-[8px] pl-[30px] mt-5 border-l-blue-600">
+      <p className=" w-[405px] md:w-full text-neutral-800 text-xl md:text-[17px] font-bold uppercase leading-loose border-l-[8px] pl-[30px] mt-5 border-l-blue-600">
         "Unveiling Timeless Elegance: Exploring the Allure of Vintage Fashion"
       </p>
-      <div className=" pl-11 py-2.5 items-center gap-2.5 inline-flex">
-        <p className="text-neutral-800 text-[14px] font-normal leading-[30px]">
+      <div className=" px-11 py-2.5 items-center gap-2.5 inline-flex ">
+        <p className="text-neutral-800 text-[14px] font-normal leading-[30px] ">
           The Essence of Time Travel
           <br />
           Vintage fashion allows us to transcend eras, stepping into the shoes
