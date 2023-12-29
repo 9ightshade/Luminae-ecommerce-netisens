@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 export const SignIn = () => {
@@ -67,7 +68,7 @@ export const SignIn = () => {
       <p className="text-[#262626] text-[.8rem] font-[500] text-center lowercase">
         Don’t have an account?
         <span className="text-[#FF7A00] text-[16px] font-[700] leading-[1.5rem] lowercase">
-          Sign Up
+        <NavLink to ="/SignUp">Sign Up</NavLink>
         </span>
       </p>
 
