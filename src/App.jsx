@@ -9,11 +9,11 @@ import { Blog } from "./pages/Blog";
 function App() {
   return (
     <div className="" >
-      {/* <Home/> */}
+      <Home/>
       {/* <Checkout/> */}
       {/* <LoginPage/> */}
       {/* <About/> */}
-      <Blog/>
+      {/* <Blog/> */}
     </div>
   );
 }
