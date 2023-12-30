@@ -23,10 +23,10 @@ export const Blog = () => {
 
       <div className="p-[20px]">
         <div>
-          <div className="flex gap-2 md:justify-center">
-            <div>
-              <Stylishwoman />
-              <div className="flex justify-start md:justify-start gap-3  mt-3  ">
+          <div className="flex gap-2 md:justify-center m-auto ">
+            <div className="">
+                <Stylishwoman />
+              <div className="flex md:justify-between gap-3 mt-3 justify-center">
                 <BlogAboutFashion />
                 <BlogAboutTech />
                 <BlogAboutTech2 />
@@ -50,7 +50,6 @@ export const Blog = () => {
       <div className="">
         <BlogTopFooter />
         <BlogBottomFooter />
-       
       </div>
     </div>
   );

@@ -1,13 +1,18 @@
 import React from "react";
 import messageicon from "../../../assets/images/blog-images/messageicon.png";
 import blogtech2 from "../../../assets/images/blog-images/blogtech2.png";
-
+import blogtech2imgforLGscreens from "../../../assets/images/blog-images/blogtech2imgforLGscreen.png";
 
 export const BlogAboutTech2 = () => {
   return (
     <div>
-      <div className="bg-white shadow pb-[10px] w-[161.8px] hidden md:max-lg:block md:h-[500px]">
-        <img className="block md:hiddem" src={blogtech2} />
+      <div className="bg-white shadow pb-[10px] w-[161.8px] hidden md:block md:h-[500px] lg:w-[250px] lg:h-[442px]">
+        <img className="block lg:hidden" src={blogtech2} />
+        <img
+          src={blogtech2imgforLGscreens}
+          alt=""
+          className="hidden lg:block"
+        />
 
         <div className="m-2">
           <p className="text-[12px] py-2 text-orange-500">tech</p>

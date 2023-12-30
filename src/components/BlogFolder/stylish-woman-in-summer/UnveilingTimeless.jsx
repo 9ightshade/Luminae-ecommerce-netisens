@@ -2,7 +2,7 @@ import React from 'react'
 
 export const UnveilingTimeless = () => {
   return (
-    <div className='justify-end'>
+    <div className='justify-end block m-auto w-[90%]'>
       <p className=" w-[405px] md:w-full text-neutral-800 text-xl md:text-[17px] font-bold uppercase leading-loose border-l-[8px] pl-[30px] mt-5 border-l-blue-600">
         "Unveiling Timeless Elegance: Exploring the Allure of Vintage Fashion"
       </p>

@@ -4,13 +4,15 @@ import stylishwoman2 from "../../../assets/images/blog-images/stylishwoman2.png"
 import rightarrow from "../../../assets/images/blog-images/rightarrow.svg"
 import blondhair from "../../../assets/images/blog-images/blondhair.png";
 import blondhairimg2 from "../../../assets/images/blog-images/blondHairImg2.png";
+import stylishwomanimg2forLGscreen from "../../../assets/images/blog-images/stylishwomanimgforLGscreens.png";
+import blogblondhairforLGscreens from "../../../assets/images/blog-images/blogblondhairforLGscreens.png";
 
 export const Stylishwoman = () => {
   return (
-    <div className="flex gap-2 md:max-lg:h-[300px]">
+    <div className="flex gap-2 md:max-lg:h-[300px] lg:h-[350px]">
       <div className="inline-flex  ">
-        <div className=" p-[5px] w-[159px] md:max-lg:w-[200px] bg-gradient-to-b from-gray-200 via-gray-200 to-zinc-300 pl-2">
-          <p className="text-[12px] font-bold w-[160px] md:max-lg:text-[16px] md:max-lg:w-[156px] md:max-lg:mt-[15px] py-2  ">
+        <div className=" p-[5px] w-[159px] md:max-lg:w-[200px] lg:w-[250px] bg-gradient-to-b from-gray-200 via-gray-200 to-zinc-300 pl-2">
+          <p className="text-[12px] font-bold w-[160px] md:max-lg:text-[16px] lg:text-[15px]  md:max-lg:w-[156px] lg:w-[250px] md:max-lg:mt-[15px] lg:mt-[25px] py-2  ">
             Stylish woman in summer outfit isolated posing in fashion trend
             isolated
           </p>
@@ -20,7 +22,7 @@ export const Stylishwoman = () => {
             allure. Bathed in the gentle...
           </p>
 
-          <p className="text-[9px] font-bold w-[128.px] text-gray-600 md:max-lg hidden lg:block ">
+          <p className="text-[9px] font-bold w-[128.px] text-gray-600 md:max-lg hidden lg:block lg:text-[13px]">
             In this captivating scene, a stylish woman stands confidently
             against a pristine backdrop, capturing the essence of summer's
             allure. Bathed in the gentle sunlight, she emanates an air of
@@ -29,7 +31,7 @@ export const Stylishwoman = () => {
             season.
           </p>
 
-          <div className="flex gap-1 items-center justify-center bg-blue-500 text-[10px] rounded w-[110px] px-[3px] py-[4px] text-white mt-[15px]">
+          <div className="flex gap-1 items-center justify-center bg-blue-500 text-[10px] lg:text-[14px] lg:p-2 lg:w-[147px] rounded w-[110px] px-[3px] py-[4px] text-white mt-[15px]">
             <p>READ MORE</p>
             <img src={rightarrow} alt="arrow right" />
           </div>
@@ -44,12 +46,22 @@ export const Stylishwoman = () => {
           <img
             src={stylishwoman2}
             alt="stylish woman in summer outfit"
-            className="h-full hidden md:block"
+            className="h-full hidden md:max-lg:block"
+          />
+          <img
+            src={stylishwomanimg2forLGscreen}
+            alt="stylish woman in summer outfit"
+            className="h-full hidden lg:block"
           />
         </div>
       </div>
       <img src={blondhair} className="block md:hidden" alt="" />
-      <img src={blondhairimg2} className="hidden md:block" alt="" />
+      <img src={blondhairimg2} className="hidden md:max-lg:block" alt="" />
+      <img
+        src={blogblondhairforLGscreens}
+        alt=""
+        className="hidden lg:block lg:h-[350px]"
+      />
     </div>
   );
 }

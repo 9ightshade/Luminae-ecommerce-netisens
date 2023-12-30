@@ -14,62 +14,68 @@ import bloggalleryLP4 from "../../../assets/images/blog-images/bloggalleryLP4.pn
 
 export const BlogGallery = () => {
   return (
-    <div className="flex gap-1 mt-[20px] md:justify-center md:h-[500]  ">
-      <div className="border md:h-[527px]">
-        <img src={bloggallery1} alt="" className="block md:hidden" />
-        <img
-          src={bloggalleryTB1}
-          alt=""
-          className="hidden md:max-lg:block md:max-lg:h-[100%]"
-        />
-        <img
-          src={bloggalleryLP1}
-          alt=""
-          className="hidden lg:block lg:h-[100%]"
-        />
-      </div>
-
-      <div className="gap-2 md:h-[580px]">
-        <div className="mb-2 md:mb-2 md:h-[170px] ">
-          <img src={bloggallery2} alt="" className="block md:hidden" />
+    <div className="block m-auto w-[90%]  ">
+      <div className="flex gap-1 mt-[20px] md:justify-center justify-center md:h-[200]">
+        <div className="md:h-[527px]">
           <img
-            src={bloggalleryTB2}
+            src={bloggallery1}
             alt=""
-            className="hidden md:max-lg:block md:max-lg:h-[100%] "
+            className="block md:hidden "
           />
           <img
-            src={bloggalleryLP2}
+            src={bloggalleryTB1}
+            alt=""
+            className="hidden md:max-lg:block md:max-lg:h-[100%]"
+          />
+          <img
+            src={bloggalleryLP1}
             alt=""
             className="hidden lg:block lg:h-[100%]"
           />
         </div>
 
-        <div className="mb-2 md:max-lg:mb-2 md:h-[170px]">
-          <img src={bloggallery3} alt="" className="block md:hidden" />
-          <img
-            src={bloggalleryTB3}
-            alt=""
-            className="hidden md:max-lg:block md:max-lg:h-[100%]"
-          />
-          <img
-            src={bloggalleryLP3}
-            alt=""
-            className="hidden lg:block lg:h-[100%]"
-          />
-        </div>
+        <div className="gap-2 md:h-[580px] ">
+          <div className="mb-2 md:mb-2 md:h-[170px] ">
+            <img src={bloggallery2} alt="" className="block md:hidden" />
+            <img
+              src={bloggalleryTB2}
+              alt=""
+              className="hidden md:max-lg:block md:max-lg:h-[100%] "
+            />
+            <img
+              src={bloggalleryLP2}
+              alt=""
+              className="hidden lg:block lg:h-[100%]"
+            />
+          </div>
 
-        <div className="mb- md:h-[170px]">
-          <img src={bloggallery4} alt="" className="block md:hidden" />
-          <img
-            src={bloggalleryTB4}
-            alt=""
-            className="hidden md:max-lg:block md:max-lg:h-[100%]"
-          />
-          <img
-            src={bloggalleryLP4}
-            alt=""
-            className="hidden lg:block lg:h-[100%]"
-          />
+          <div className="mb-2 md:max-lg:mb-2 md:h-[170px]">
+            <img src={bloggallery3} alt="" className="block md:hidden" />
+            <img
+              src={bloggalleryTB3}
+              alt=""
+              className="hidden md:max-lg:block md:max-lg:h-[100%]"
+            />
+            <img
+              src={bloggalleryLP3}
+              alt=""
+              className="hidden lg:block lg:h-[100%]"
+            />
+          </div>
+
+          <div className="mb- md:h-[170px]">
+            <img src={bloggallery4} alt="" className="block md:hidden" />
+            <img
+              src={bloggalleryTB4}
+              alt=""
+              className="hidden md:max-lg:block md:max-lg:h-[100%]"
+            />
+            <img
+              src={bloggalleryLP4}
+              alt=""
+              className="hidden lg:block lg:h-[100%]"
+            />
+          </div>
         </div>
       </div>
     </div>

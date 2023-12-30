@@ -8,7 +8,7 @@ import heart from "../../assets/images/blog-images/Heart.png";
 export const BlogHeroLg = () => {
   return (
     <div className="hidden lg:flex items-start py-[40px] blogHeroLg ">
-      <div className="my-[80px]  ">
+      <div className="my-[80px] mx-[50px]  ">
         <img src={bookmark} alt="" />
       </div>
       <div className=" w-[387px] lg:w-[500px] flex-col justify-start items-start gap-[41px] inline-flex ">

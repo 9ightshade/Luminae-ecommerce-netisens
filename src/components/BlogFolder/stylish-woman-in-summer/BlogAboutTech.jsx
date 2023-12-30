@@ -1,12 +1,14 @@
 import React from "react";
 import messageicon from "../../../assets/images/blog-images/messageicon.png";
 import watch from "../../../assets/images/blog-images/watch.png";
+import blogtechimgforLGscreens from "../../../assets/images/blog-images/blogtechforLGscreen.png";
 
 export const BlogAboutTech = () => {
   return (
     <div>
-      <div className="bg-white shadow pb-[10px] w-[187.5px] md:w-[161.8px] md:h-[500px] ">
-        <img className="" src={watch} />
+      <div className="bg-white shadow pb-[10px] w-[187.5px] md:w-[161.8px] md:h-[500px] lg:w-[250px] lg:h-[442px]">
+        <img className="block lg:hidden" src={watch} />
+        <img src={blogtechimgforLGscreens} alt="" className="hidden lg:block" />
 
         <div className="m-2">
           <p className="text-[12px] py-2 text-orange-500">tech</p>

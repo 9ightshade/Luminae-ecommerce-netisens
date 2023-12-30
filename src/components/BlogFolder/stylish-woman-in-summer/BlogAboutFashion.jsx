@@ -7,9 +7,10 @@ import fashionblogforLGscreen from "../../../assets/images/blog-images/fashionim
 export const BlogAboutFashion = () => {
   return (
     <div>
-      <div className="bg-white shadow pb-[10px] w-[187.5px] md:w-[161.8px] md:h-[500px] ">
+      <div className="bg-white shadow pb-[10px] w-[187.5px] md:w-[161.8px] md:h-[500px] lg:w-[250px] lg:h-[442px]">
         <div>
-          <img className="" src={fashionblog} />
+          <img className=" block lg:hidden" src={fashionblog} />
+          <img src={fashionblogforLGscreen} alt="" className='hidden lg:block' />
         </div>
 
         <div className="m-2">
@@ -21,16 +22,16 @@ export const BlogAboutFashion = () => {
           </p>
           <p className="text-[14px] font-normal text-neutral-600 hidden md:max-lg:block ">
             In the heart of the bustling city, a stylish young man navigates the
-            urban landscape with an air of contemporary confidence. His ensemble
-            effortlessly captures the essence of city chic...
+            urban landscape with an air of contemporary coknfidence. His
+            ensemble effortlessly captures the essence of city chic...
           </p>
-          <p className='hidden lg:block'>
+          <p className="hidden lg:block">
             In the heart of the bustling city, a stylish young man navigates the
             urban landscape with an air of contemporary confidence. His ensemble
             effortlessly captures the essence of city chic...
           </p>
         </div>
- 
+
         <div className="flex items-center justify-start gap-3 m-2 my-[10px]">
           <p className="text-[12px] text-neutral-600">3 hours ago</p>
 
