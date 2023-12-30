@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import luminae from "../../assets/images/icons/header/logo.png";
+import luminae from "../../assets/images/icons/header/Logo.png";
 
 export const Logo = ({text}) => {
   return (
