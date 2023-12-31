@@ -13,7 +13,7 @@ export const Topnav = () => {
   return (
     <div>
       {/* this will display only on mobile screens */}
-      <div className="flex items-center justify-between mt-[10px] md:hidden mb-[30px]">
+      <div className="flex items-center justify-between mt-[10px] md:hidden mb-[30px] ">
         <img src={hamburger} alt="menu-toggle" />
         <Logo text="Luminae" />
         <Cartbag />
@@ -42,7 +42,7 @@ export const Topnav = () => {
         <NavCategory />
       </div>
 
-      <div className="hidden">
+      <div className="hidden ">
         <Productcategory />
       </div>
     </div>

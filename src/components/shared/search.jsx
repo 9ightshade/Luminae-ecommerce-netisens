@@ -3,7 +3,7 @@ import search from "../../assets/images/icons/header/Search.png";
 export const Search = () => {
   return (
     <div className="p-[em]">
-      <div className="flex relative md:max-lg:w-[350px] lg:w-[280px] ">
+      <div className="flex relative md:max-lg:w-[350px] lg:w-[280px] mx-[15px] ">
         <input
           type="text"
           placeholder="Search Products"
