@@ -8,7 +8,7 @@ export const Recommendations = () => {
   return (
     <section className="py-[1em] px-[2em]">
       <div className="flex justify-between">
-        <h2 className="text-[#262626] text-[.8rem] font-[700] uppercase">
+        <h2 className="text-[#262626] text-[.8rem] font-bold uppercase">
           You might also like
         </h2>
 

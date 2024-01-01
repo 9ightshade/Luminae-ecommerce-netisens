@@ -1,3 +1,4 @@
+import { Checkout } from "./pages/Checkout";
 import { Home } from "./pages/Home";
 import { Productdetails } from "./pages/Productdetails";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="" >
       {/* <Home/> */}
       <Productdetails/>
+      {/* <Checkout/> */}
     </div>
   );
 }
