@@ -1,12 +1,37 @@
 import { Googlesign } from "../signin/signIn";
 // import emailvector from "../../assets/images/forms/email_bg.svg"
 import confetti from "../../assets/images/forms/confetti.png"
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import {app} from "../../firebase-config"
+import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
 export const SignUp = () => {
+
+//declared states for form inputs
+const [userName, setUserName] = useState('');
+const [email, setEmail] = useState('');
+const [password, setPassword]= useState('');
+const [checkbox, setCheckbox] = useState(false);
+let navigate = useNavigate();
+const handleSubmit= (e)=>{
+  e.preventDefault()
+}
+const handleSignUp =()=>{
+
+  const authentication = getAuth();
+  createUserWithEmailAndPassword(authentication, email, password, userName)
+  .then((response) =>{
+    console.log(response);
+    navigate('/')
+    sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+  })
+
+}
+
+
   return (
-    <form
-      action="POST"
-      className="w-[94%] max-w-[700px] py-[4em] relative space-y-[1em] mx-[auto]"
-    >
+    <form onSubmit={handleSubmit}
+      className="w-[94%] max-w-[700px] py-[4em] relative space-y-[1em] mx-[auto]">
       <h1
         className="
             text-[#000]
@@ -29,6 +54,7 @@ font-[400]
           name="username"
           id="username"
           placeholder="Full name"
+         onChange={(e)=>{setUserName(e.target.value)}}
           className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
         />
       </label>
@@ -45,6 +71,7 @@ font-[400]"
           name="email"
           id="email"
           placeholder="Email address"
+         onChange={(e)=>{setEmail(e.target.value)}}
           className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
         />
       </label>
@@ -59,6 +86,7 @@ font-[400]"
           name="password"
           id="password"
           placeholder="password"
+         onChange={(e)=>{setPassword(e.target.value)}}
           className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
         />
       </label>
@@ -70,7 +98,7 @@ font-[400]"
           lets users know they’re reading a terms and conditions agreement
         </p>
       </section>
-      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase">
+      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase"onClick={handleSignUp} >
         Sign up
       </button>
 

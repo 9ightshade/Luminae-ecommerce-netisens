@@ -13,16 +13,23 @@ export const SignIn = () => {
 const [password, setPassword]= useState('');
 const [email, setEmail] = useState('');
 const [checkbox, setCheckbox] = useState(false);
-console.log(email, password ,checkbox );
 
-const handleSubmit = ()=>{
-const authentication = getAuth();
-createUserWithEmailAndPassword(authentication, email, password)
+const handleSubmit = (e)=>{
+  e.preventDefault();
 }
 
+const handleSignIn =()=>{
+
+  const authentication = getAuth();
+ console.log(email);
+ console.log(password);
+ console.log(checkbox);
+ signInWithEmailAndPassword(authentication, email, password);
+ 
+}
 
   return (
-    <form className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] ">
+    <form  className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] " onSubmit={handleSubmit}>
       <h1 className="text-[#000] text-[1.25rem] mb-[1em] font-[600]">
         Sign in
       </h1>
@@ -74,7 +81,7 @@ createUserWithEmailAndPassword(authentication, email, password)
       <button
         type="submit"
         className="rounded-[4px] w-[100%] focus:bg-[#4172DC] hover:bg-[#4172DC] bg-[#C4C4C4] text-[#FFF] text-center text-[.8rem] font-[500] p-[1em] uppercase"
-        onClick={handleSubmit}
+        onClick={handleSignIn}
       >
         sign in
       </button>
