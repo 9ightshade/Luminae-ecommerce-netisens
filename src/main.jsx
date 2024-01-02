@@ -11,6 +11,7 @@ import { Error } from './pages/Error.jsx';
 import { About } from './pages/About.jsx';
 import { SignInPage } from './pages/SignInPage.jsx';
 import { SignUpPage } from './pages/SignUpPage.jsx';
+import { Changepassword } from './components/signup/forgotten.jsx';
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/About",
     element: <About/>
+  },
+  {
+    path: "/forgotpassword",
+    element: <Changepassword/>
   },
   {
     path: "/SignIn",

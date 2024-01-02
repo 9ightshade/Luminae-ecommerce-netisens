@@ -6,8 +6,8 @@ import { Productdetails } from "./pages/Productdetails";
 function App() {
   return (
     <div className="" >
-      {/* <Home/> */}
-      <Productdetails/>
+      <Home/>
+      {/* <Productdetails/> */}
       {/* <Checkout/> */}
     </div>
   );

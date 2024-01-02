@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
 import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
+import { useState } from "react";
 export const SignIn = () => {
+const [password, setPassword]= useState('');
+const [email, setEmail] = useState('');
+console.log(email, password);
   return (
-    <form action="POST" className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] ">
+    <form className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] ">
       <h1 className="text-[#000] text-[1.25rem] mb-[1em] font-[600]">
         Sign in
       </h1>
@@ -15,6 +19,7 @@ export const SignIn = () => {
           name="email"
           id="email"
           placeholder="Email address"
+          onChange={(e)=>{setEmail(e.target.value)}}
           className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
         />
       </label>
@@ -28,6 +33,7 @@ export const SignIn = () => {
           type="password"
           name="password"
           id="password"
+          onChange={(e)=>{setPassword(e.target.value)}}
           className="block rounded-[4px] border-[#D9D9D9] p-[.7em] border-[1px] w-[100%]"
         />
       </label>
@@ -41,11 +47,12 @@ export const SignIn = () => {
             name="checkbox"
             id="checkbox"
             className=""
+
           />
           Remember for 30 days
         </label>
 
-        <p className="text-[#4172DC] text-[12px] font-[400]">Forgot password</p>
+       <NavLink to="/forgotpassword" > <p className="text-[#4172DC] text-[12px] font-[400]">Forgot password</p></NavLink>
       </section>
 
       <button
@@ -68,7 +75,7 @@ export const SignIn = () => {
       <p className="text-[#262626] text-[.8rem] font-[500] text-center lowercase">
         Don’t have an account?
         <span className="text-[#FF7A00] text-[16px] font-[700] leading-[1.5rem] lowercase">
-        <NavLink to ="/SignUp">Sign Up</NavLink>
+        <NavLink to ="/signUp">Sign Up</NavLink>
         </span>
       </p>
 
