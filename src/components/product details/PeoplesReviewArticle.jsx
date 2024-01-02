@@ -3,21 +3,21 @@ import React from 'react'
 export const PeoplesReviewArticle = () => {
   return (
     <div>
-      <div className="mt-[30px]">
+      <div className="my-[30px]">
         <div className="flex gap-2 items-center mb-[10px]">
-          <p className="text-[#9D9D9D] w-[100px] text-[14px ">Advantage</p>
+          <p className="text-[#9D9D9D] w-[100px] text-[14px]">Advantage</p>
           <p className="text-[13px] font-bold">Color, Sizes</p>
         </div>
 
         <div className="flex gap-2 items-center mb-[10px]">
-          <p className="text-[#9D9D9D] text-[14px] w-[100px] border">
+          <p className="text-[#9D9D9D] text-[14px] w-[100px]">
             Disadvantages
           </p>
           <p className="text-center w-[80px]">-</p>
         </div>
 
-        <div className="items-baseline gap-2 mb-[10px]">
-          <p className="text-[#9D9D9D] w-[100px] text-[14px] mb-[5px]">
+        <div className="items-baseline gap-16 mb-[10px] block md:flex">
+          <p className="text-[#9D9D9D] w-[100px] text-[14px] mb-[5px] ">
             Review
           </p>
           <p className="text-[13px] ">

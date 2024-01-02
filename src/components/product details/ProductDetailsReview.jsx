@@ -6,7 +6,7 @@ export const ProductDetailsReview = () => {
   return (
     <div>
       <div>
-        <div className="flex justify-between my-[20px] text-[14px] font-bold items-center">
+        <div className="flex justify-between my-[20px] text-[14px] font-bold items-center md:justify-center md:gap-12">
           <p className="text-gray-600">PRODUCT DETAILS</p>
           <p>
             REVIEW <span>(5)</span>
@@ -16,8 +16,8 @@ export const ProductDetailsReview = () => {
         <hr className="my-[10px] w-full border-[1px]" />
       </div>
 
-      <div className="mt-[20px] items-center justify-between h-[212px] flex gap-2">
-        <div className="w-[45%] h-[200px]">
+      <div className="mt-[20px] items-center justify-between h-[212px] flex gap-2 md:justify-center md:gap-12">
+        <div className="w-[45%] h-[200px] md:w-[30%]">
           <p className="font-bold text-[20px]">Total review rate</p>
           <p className="text-[13px] mt-[15px]">
             Average rating (10 Reviews &125 Ratings)
@@ -42,7 +42,7 @@ export const ProductDetailsReview = () => {
         </div>
         
       </div>
-     
+     <hr className='h-[2px] my-[20px] w-full' />
     </div>
   );
 }

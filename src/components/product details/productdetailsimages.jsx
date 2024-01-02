@@ -8,7 +8,7 @@ import productdetailsminiimg5 from "../../assets/images/product details images/p
 
 export const Productdetailsimages = () => {
   return (
-    <div>
+    <div className='block md:hidden'>
       <div>
         <img src={productdetailsmainclothe} alt="" className="mt-[30px]" />
       </div>
