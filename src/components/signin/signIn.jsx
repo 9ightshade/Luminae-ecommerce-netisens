@@ -2,10 +2,25 @@ import { NavLink } from "react-router-dom";
 import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 import { useState } from "react";
+import {app} from "../../firebase-config"
+import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
+
+
+
+
 export const SignIn = () => {
+//declared states for form inputs
 const [password, setPassword]= useState('');
 const [email, setEmail] = useState('');
-console.log(email, password);
+const [checkbox, setCheckbox] = useState(false);
+console.log(email, password ,checkbox );
+
+const handleSubmit = ()=>{
+const authentication = getAuth();
+createUserWithEmailAndPassword(authentication, email, password)
+}
+
+
   return (
     <form className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] ">
       <h1 className="text-[#000] text-[1.25rem] mb-[1em] font-[600]">
@@ -46,6 +61,7 @@ console.log(email, password);
             type="checkbox"
             name="checkbox"
             id="checkbox"
+            onClick={() =>{setCheckbox(!checkbox)}}
             className=""
 
           />
@@ -58,6 +74,7 @@ console.log(email, password);
       <button
         type="submit"
         className="rounded-[4px] w-[100%] focus:bg-[#4172DC] hover:bg-[#4172DC] bg-[#C4C4C4] text-[#FFF] text-center text-[.8rem] font-[500] p-[1em] uppercase"
+        onClick={handleSubmit}
       >
         sign in
       </button>
