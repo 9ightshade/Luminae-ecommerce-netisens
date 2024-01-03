@@ -13,7 +13,7 @@ export const Topnav = () => {
   return (
     <div>
       {/* this will display only on mobile screens */}
-      <div className="flex items-center justify-between mt-[10px] md:hidden mb-[30px] ">
+      <div className="flex items-center justify-between mt-[20px] md:hidden mb-[30px] mx-[20px]">
         <img src={hamburger} alt="menu-toggle" />
         <Logo text="Luminae" />
         <Cartbag />
