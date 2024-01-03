@@ -3,21 +3,23 @@ import { Googlesign } from "../signin/signIn";
 import confetti from "../../assets/images/forms/confetti.png"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useContext } from "react";
+import { MyContext } from "../../MyContext";
 import {app} from "../../firebase-config"
 import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
 export const SignUp = () => {
 
 //declared states for form inputs
 const [userName, setUserName] = useState('');
-const [email, setEmail] = useState('');
-const [password, setPassword]= useState('');
+const {email, setEmail} = useContext(MyContext);
+const {password, setPassword}= useContext(MyContext);
 const [checkbox, setCheckbox] = useState(false);
 let navigate = useNavigate();
 const handleSubmit= (e)=>{
   e.preventDefault()
 }
 const handleSignUp =()=>{
-
+console.log(email,password);
   const authentication = getAuth();
   createUserWithEmailAndPassword(authentication, email, password, userName)
   .then((response) =>{

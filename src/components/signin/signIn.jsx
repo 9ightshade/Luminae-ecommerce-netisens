@@ -4,15 +4,17 @@ import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 import { useState } from "react";
 import {app} from "../../firebase-config"
 import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
-
-
-
+import { MyContext } from "../../MyContext";
+import { useContext } from "react";
 
 export const SignIn = () => {
 //declared states for form inputs
-const [password, setPassword]= useState('');
-const [email, setEmail] = useState('');
+const [password, setPassword]= useContext(MyContext);
+const [email, setEmail] = useContext(MyContext);
 const [checkbox, setCheckbox] = useState(false);
+
+//test if state auto updates
+
 
 const handleSubmit = (e)=>{
   e.preventDefault();
