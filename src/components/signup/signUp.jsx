@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { MyContext } from "../../MyContext";
 import {app} from "../../firebase-config"
-import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"
 export const SignUp = () => {
 
 //declared states for form inputs

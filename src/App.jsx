@@ -56,7 +56,6 @@ const [password, setPassword] = useState('');
   return (
     <div>
       <MyContext.Provider value={{email, setEmail,password, setPassword }}>
-      {/* <Home/> */}
       {/* <ListOfProduct/>  */}
       {/* <ProductFilter/> */}
       <RouterProvider router={router} />   

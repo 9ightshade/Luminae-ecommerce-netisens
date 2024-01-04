@@ -2,31 +2,34 @@ import { NavLink } from "react-router-dom";
 import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 import { useState } from "react";
-import {app} from "../../firebase-config"
-import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
 import { MyContext } from "../../MyContext";
 import { useContext } from "react";
-
+import { useNavigate } from "react-router-dom";
 export const SignIn = () => {
 //declared states for form inputs
 const {password, setPassword}= useContext(MyContext);
 const {email, setEmail} = useContext(MyContext);
 const [checkbox, setCheckbox] = useState(false);
+let navigate = useNavigate();
 
-//test if state auto updates
 
-
+//func to prevent default form submit 
 const handleSubmit = (e)=>{
   e.preventDefault();
 }
 
 const handleSignIn =()=>{
 
-  const authentication = getAuth();
+ const authentication = getAuth();
  console.log(email);
  console.log(password);
  console.log(checkbox);
- signInWithEmailAndPassword(authentication, email, password);
+ signInWithEmailAndPassword(authentication, email, password)
+ .then((response)=>{
+  console.log(response);
+  navigate('/')
+ })
  
 }
 
