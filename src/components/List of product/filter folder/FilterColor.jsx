@@ -3,8 +3,6 @@ import React from 'react'
 export const FilterColor = () => {
   return (
     <div>
-      <p>COLOR</p>
-
       <div className=" gap-[40px] items-center my-[20px]">
         <p className="font-bold">Color</p>
 

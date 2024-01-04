@@ -2,7 +2,7 @@ import { Newsletteremail } from "../newsletter/newletteremail";
 
 export const Footer = () => {
   return (
-    <div className="relative " >
+    <div className=" " >
        
         <div className="hidden absolute top-[5%] left-[50%] transform -translate-x-1/2 -translate-y-1/2" >
            <Newsletteremail />

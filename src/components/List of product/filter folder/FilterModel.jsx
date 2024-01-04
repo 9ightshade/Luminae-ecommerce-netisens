@@ -2,8 +2,8 @@ import React from 'react'
 
 export const FilterModel = () => {
   return (
-    <div>
-      <p>MODEL</p>
+    <div className='justify-start'>
+      <p className='font-bold text-[14px] my-[10px]'>MODEL</p>
       <select name="" id="" className="w-full">
         <option value="">
           <div className="justify-between gap-4 flex border">

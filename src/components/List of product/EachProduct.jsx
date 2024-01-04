@@ -96,7 +96,7 @@ const tophundredArray = [
 
 export const EachProduct = () => {
   return (
-    <div className="flex flex-wrap justify-around lg:overflow-x-none  md:justify-center md:flex lg:mx-[20px]">
+    <div className="flex flex-wrap justify-around lg:overflow-x-none md:justify-center md:flex lg:mx-[20px]">
       {tophundredArray.map((tophundred) => (
         <div
           className=" min-w-[250px] w-[150px] sm:max-md:block border-none p-1 shadow rounded-xl my-2 lg:w-[250px] flex-col justify-start 
