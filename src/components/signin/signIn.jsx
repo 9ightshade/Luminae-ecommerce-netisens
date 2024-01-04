@@ -9,8 +9,8 @@ import { useContext } from "react";
 
 export const SignIn = () => {
 //declared states for form inputs
-const [password, setPassword]= useContext(MyContext);
-const [email, setEmail] = useContext(MyContext);
+const {password, setPassword}= useContext(MyContext);
+const {email, setEmail} = useContext(MyContext);
 const [checkbox, setCheckbox] = useState(false);
 
 //test if state auto updates

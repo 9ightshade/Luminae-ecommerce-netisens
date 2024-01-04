@@ -2,8 +2,51 @@
 import { useState } from "react";
 import { Home } from "./pages/Home";
 import { MyContext } from "./MyContext";
-import { ListOfProduct } from "./pages/ListOfProduct";
+// import { ListOfProduct } from "./pages/ListOfProduct";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
+import { Blog } from './pages/Blog.jsx';
+import { Error } from './pages/Error.jsx';
+import { About } from './pages/About.jsx';
+import { SignInPage } from './pages/SignInPage.jsx';
+import { SignUpPage } from './pages/SignUpPage.jsx';
+import { Changepassword } from './components/signup/forgotten.jsx';
+
+
+//Routes path
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>
+  },
+  {
+    path: "/Blog",
+    element: <Blog/>
+  },
+  {
+    path: "/About",
+    element: <About/>
+  },
+  {
+    path: "/forgotpassword",
+    element: <Changepassword/>
+  },
+  {
+    path: "/SignIn",
+    element: <SignInPage/>
+  },
+  {
+    path: "/SignUp",
+    element: <SignUpPage/>
+  },
+   {
+    path: "*",
+    element: <Error/>
+  },
+]);
 
 
 function App() {
@@ -12,11 +55,12 @@ const [password, setPassword] = useState('');
 
   return (
     <div>
-      {/* <MyContext.Provider value={{email, setEmail,password, setPassword }}> */}
+      <MyContext.Provider value={{email, setEmail,password, setPassword }}>
       {/* <Home/> */}
-      <ListOfProduct/> 
+      {/* <ListOfProduct/>  */}
       {/* <ProductFilter/> */}
-      {/* </MyContext.Provider> */}
+      <RouterProvider router={router} />   
+      </MyContext.Provider>
     </div>
   );
 }
