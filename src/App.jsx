@@ -1,11 +1,11 @@
-// import { ProductFilter } from "./components/List of product/filter folder/ProductFilter";
-import { useState } from "react";
+import { useState} from "react";
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Home } from "./pages/Home";
 import { MyContext } from "./MyContext";
-// import { ListOfProduct } from "./pages/ListOfProduct";
 import {
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider 
 } from "react-router-dom";
 
 import { Blog } from './pages/Blog.jsx';
@@ -16,7 +16,9 @@ import { SignUpPage } from './pages/SignUpPage.jsx';
 import { Changepassword } from './components/signup/forgotten.jsx';
 import {app} from './firebase-config.js'
 import {getAuth,signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
-// import { useNavigate } from "react-router-dom";
+
+
+
 //Routes path
 const router = createBrowserRouter([
   {
@@ -53,6 +55,12 @@ const router = createBrowserRouter([
 function App() {
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
+let authToken;
+
+// useEffect(()=>{
+//   console.log(authToken);
+//   console.log("testing");
+// }, [])
 
 
 //handles authentication
@@ -60,7 +68,7 @@ const [password, setPassword] = useState('');
 
 const handleauth = (id)=>{
 const authentication = getAuth();
-// const navigate = useNavigate();
+
 console.log(id);
 
 //sign up condition
@@ -69,28 +77,39 @@ if(id== 1){
   console.log(email,password);
   createUserWithEmailAndPassword(authentication, email, password)
   .then((response) =>{
-    console.log(response);
-    console.log(response._tokenResponse.refreshToken);
+    let res = response;
+   console.log("promise fulfilled:", res);
     // navigate('/')
     sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+  })
+  .catch((error) =>{
+  if(error.code == 'auth/email-already-in-use'){
+  toast.error('user already exist please login')
+  }
+  console.log(error.code);
   })
 }
 //sign in condition
 else if(id==2){
   signInWithEmailAndPassword(authentication, email, password)
   .then((response)=>{
-   console.log(response);
-  //  navigate('/')
+    let res = response;
+   console.log("promise fulfilled:", res);
+   sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+    authToken = sessionStorage.getItem('Auth Token');
+   console.log(authToken);
+   if (authToken){
+    console.log("need to nav to home page");
+   }
   })
-
-}
-}
+  .catch((error)=>{
+    console.log(error);
+  })
+}}
 
   return (
     <div>
-      <MyContext.Provider value={{email, setEmail,password, setPassword, handleauth }}>
-      {/* <ListOfProduct/>  */}
-      {/* <ProductFilter/> */}
+      <MyContext.Provider value={{email, setEmail,password, setPassword, handleauth,authToken }}>
       <RouterProvider router={router} />   
       </MyContext.Provider>
     </div>
