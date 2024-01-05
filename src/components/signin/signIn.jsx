@@ -2,36 +2,26 @@ import { NavLink } from "react-router-dom";
 import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 import { useState } from "react";
-import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
 import { MyContext } from "../../MyContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
+
+
+
 export const SignIn = () => {
 //declared states for form inputs
 const {password, setPassword}= useContext(MyContext);
 const {email, setEmail} = useContext(MyContext);
 const [checkbox, setCheckbox] = useState(false);
 let navigate = useNavigate();
-
+const {handleauth} = useContext(MyContext);
 
 //func to prevent default form submit 
 const handleSubmit = (e)=>{
   e.preventDefault();
 }
 
-const handleSignIn =()=>{
-
- const authentication = getAuth();
- console.log(email);
- console.log(password);
- console.log(checkbox);
- signInWithEmailAndPassword(authentication, email, password)
- .then((response)=>{
-  console.log(response);
-  navigate('/')
- })
- 
-}
 
   return (
     <form  className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] " onSubmit={handleSubmit}>
@@ -86,7 +76,7 @@ const handleSignIn =()=>{
       <button
         type="submit"
         className="rounded-[4px] w-[100%] focus:bg-[#4172DC] hover:bg-[#4172DC] bg-[#C4C4C4] text-[#FFF] text-center text-[.8rem] font-[500] p-[1em] uppercase"
-        onClick={handleSignIn}
+        onClick={()=>{handleauth(2)}}
       >
         sign in
       </button>
