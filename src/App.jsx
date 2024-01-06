@@ -57,6 +57,7 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 let authToken;
 
+
 // useEffect(()=>{
 //   console.log(authToken);
 //   console.log("testing");
@@ -84,7 +85,7 @@ if(id== 1){
   })
   .catch((error) =>{
   if(error.code == 'auth/email-already-in-use'){
-  toast.error('user already exist please login')
+  toast.error('user already exist');
   }
   console.log(error.code);
   })
@@ -105,7 +106,9 @@ else if(id==2){
   .catch((error)=>{
     console.log(error);
   })
-}}
+}
+
+}
 
   return (
     <div>
