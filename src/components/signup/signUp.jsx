@@ -1,12 +1,10 @@
 import { Googlesign } from "../signin/signIn";
 // import emailvector from "../../assets/images/forms/email_bg.svg"
 import confetti from "../../assets/images/forms/confetti.png"
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
 import { MyContext } from "../../MyContext";
-import {app} from "../../firebase-config"
-import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
+
 export const SignUp = () => {
 
 //declared states for form inputs
@@ -14,20 +12,9 @@ const [userName, setUserName] = useState('');
 const {email, setEmail} = useContext(MyContext);
 const {password, setPassword}= useContext(MyContext);
 const [checkbox, setCheckbox] = useState(false);
-let navigate = useNavigate();
+const {handleauth}= useContext(MyContext);
 const handleSubmit= (e)=>{
   e.preventDefault()
-}
-const handleSignUp =()=>{
-console.log(email,password);
-  const authentication = getAuth();
-  createUserWithEmailAndPassword(authentication, email, password, userName)
-  .then((response) =>{
-    console.log(response);
-    navigate('/')
-    sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
-  })
-
 }
 
 
@@ -100,7 +87,7 @@ font-[400]"
           lets users know they’re reading a terms and conditions agreement
         </p>
       </section>
-      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase"onClick={handleSignUp} >
+      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase"onClick={()=>{handleauth(1)}} >
         Sign up
       </button>
 

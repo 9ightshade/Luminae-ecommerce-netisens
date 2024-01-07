@@ -1,5 +1,5 @@
 import { Newsletteremail } from "../newsletter/newletteremail";
-
+import { NavLink } from "react-router-dom";
 export const Footer = () => {
   return (
     <div className=" " >
@@ -13,7 +13,9 @@ export const Footer = () => {
         <div className=" items-center justify-center gap-[50px] flex pt-[50px] md:pt-0">
           <div className="w-[200px] text-gray-600">
             <p className="pb-[10px] font-bold text-black">Company</p>
-            <p>About us</p>
+           <NavLink to="/About" >
+           <p>About us</p>
+           </NavLink>
             <p>Our Store</p>
             <p>Contact us</p>
           </div>
