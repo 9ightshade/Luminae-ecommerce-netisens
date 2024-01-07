@@ -13,8 +13,8 @@ const [password, setPassword] = useState('');
   return (
     <div>
       {/* <MyContext.Provider value={{email, setEmail,password, setPassword }}> */}
-      {/* <Home/> */}
-      <ListOfProduct/> 
+      <Home/>
+      {/* <ListOfProduct/>  */}
       {/* <ProductFilter/> */}
       {/* </MyContext.Provider> */}
     </div>

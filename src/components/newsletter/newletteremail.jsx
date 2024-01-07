@@ -3,7 +3,7 @@ import React from 'react'
 export const Newsletteremail = () => {
   return (
     <div>
-      <div className="px-14 py-8 bg-slate-400 rounded-lg flex-col items-center gap-6 flex justify-center mx-auto">
+      <div className="px-14 py-8 bg-slate-400 rounded-lg flex-col w-[70%] items-center gap-6 flex justify-center mx-auto">
         <div className="self-stretch h-[63px] flex-col justify-center items-center gap-[23px] flex">
           <div className="justify-center items-center inline-flex">
             <div className="text-right flex gap-2 ">

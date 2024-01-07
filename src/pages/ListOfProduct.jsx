@@ -10,7 +10,7 @@ export const ListOfProduct = () => {
     <div>
       <div>
         <div className="">
-          <ProductFilter />
+          {/* <ProductFilter /> */}
         </div>
 
         <div className="">

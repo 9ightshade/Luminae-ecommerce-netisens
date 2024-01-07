@@ -15,6 +15,7 @@ import { Tophundredproduct } from "../components/top100/tophundred";
 import { Slider } from "../components/slider";
 import { Footer } from "../components/footer/footer";
 import { Newsletteremail } from "../components/newsletter/newletteremail";
+import { Productcategory } from "../components/shared/productcategory";
 
 const image1 = headerimg1;
 const image2 = headerimg2;
@@ -34,6 +35,7 @@ authToken?navigate('/'):navigate('/SignIn');
     <div className="">
       <div className="p-[20px] md:p-0">
         <Navbar />
+        <Productcategory/>
       </div>
 
       <div className="md:hidden my-[20px] p-[20px] md:p-0">
@@ -130,6 +132,7 @@ authToken?navigate('/'):navigate('/SignIn');
           color="bg-sky-600"
         />
       </div>
+      <Newsletteremail/>
       <Footer />
     </div>
   );
