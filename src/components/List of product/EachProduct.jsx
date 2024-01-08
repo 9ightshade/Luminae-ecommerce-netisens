@@ -1,4 +1,3 @@
-import React from "react";
 import blackdress from "../../assets/images/top100cardpictures/blackdress.png";
 import blackdresstwo from "../../assets/images/top100cardpictures/blackdress2.png";
 import zara1 from "../../assets/images/top100cardpictures/zara1.png";
@@ -10,6 +9,7 @@ import uniqlo2 from "../../assets/images/top100cardpictures/uniqlo2.png";
 import star from "../../assets/images/top100cardpictures/star.svg";
 import love from "../../assets/images/top100cardpictures/love.svg";
 import { Starratings } from "../flashsales/starratings";
+
 
 const tophundredArray = [
   {
@@ -95,6 +95,7 @@ const tophundredArray = [
 ];
 
 export const EachProduct = () => {
+
   return (
     <div className="flex flex-wrap justify-around lg:overflow-x-none md:justify-center md:flex lg:mx-[20px]">
       {tophundredArray.map((tophundred) => (

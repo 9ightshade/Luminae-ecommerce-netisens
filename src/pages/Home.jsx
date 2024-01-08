@@ -16,6 +16,8 @@ import { Slider } from "../components/slider";
 import { Footer } from "../components/footer/footer";
 import { Newsletteremail } from "../components/newsletter/newletteremail";
 import { Productcategory } from "../components/shared/productcategory";
+import { Productlist } from "../productlist";
+
 
 const image1 = headerimg1;
 const image2 = headerimg2;
@@ -36,6 +38,7 @@ authToken?navigate('/'):navigate('/SignIn');
       <div className="p-[20px] md:p-0">
         <Navbar />
         <Productcategory/>
+        <Productlist/>
       </div>
 
       <div className="md:hidden my-[20px] p-[20px] md:p-0">
