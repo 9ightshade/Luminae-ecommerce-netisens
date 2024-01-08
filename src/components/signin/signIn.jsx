@@ -2,20 +2,23 @@ import { NavLink } from "react-router-dom";
 import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 import { useState } from "react";
-import { MyContext } from "../../MyContext";
+import { authContext } from "../../MyContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
 
 
 
 export const SignIn = () => {
 //declared states for form inputs
-const {password, setPassword}= useContext(MyContext);
-const {email, setEmail} = useContext(MyContext);
+const {password, setPassword}= useContext(authContext);
+const {email, setEmail} = useContext(authContext);
 const [checkbox, setCheckbox] = useState(false);
 let navigate = useNavigate();
-const {handleauth} = useContext(MyContext);
+
+
+
+const {handleauth} = useContext(authContext);
 
 //func to prevent default form submit 
 const handleSubmit = (e)=>{

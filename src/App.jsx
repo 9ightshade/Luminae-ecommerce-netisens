@@ -1,11 +1,10 @@
-import { useState} from "react";
-import {ToastContainer, toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {  useState} from "react";
 import { Home } from "./pages/Home";
-import { MyContext } from "./MyContext";
+import { authContext } from "./MyContext";
 import {
   createBrowserRouter,
-  RouterProvider 
+  RouterProvider, 
+  useNavigate
 } from "react-router-dom";
 
 import { Blog } from './pages/Blog.jsx';
@@ -58,35 +57,27 @@ const [password, setPassword] = useState('');
 let authToken;
 
 
-// useEffect(()=>{
-//   console.log(authToken);
-//   console.log("testing");
-// }, [])
-
 
 //handles authentication
 
 
 const handleauth = (id)=>{
 const authentication = getAuth();
-
 console.log(id);
 
 //sign up condition
-if(id== 1){
+if(id == 1){
 
   console.log(email,password);
   createUserWithEmailAndPassword(authentication, email, password)
   .then((response) =>{
     let res = response;
    console.log("promise fulfilled:", res);
-    // navigate('/')
     sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+    authToken = sessionStorage.getItem('Auth Token');
+    navigate('/')
   })
   .catch((error) =>{
-  if(error.code == 'auth/email-already-in-use'){
-  toast.error('user already exist');
-  }
   console.log(error.code);
   })
 }
@@ -99,9 +90,7 @@ else if(id==2){
    sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
     authToken = sessionStorage.getItem('Auth Token');
    console.log(authToken);
-   if (authToken){
-    console.log("need to nav to home page");
-   }
+   navigate('/')
   })
   .catch((error)=>{
     console.log(error);
@@ -113,9 +102,9 @@ else if(id==2){
   return (
     <div>
 
-      <MyContext.Provider value={{email, setEmail,password, setPassword, handleauth,authToken }}>
+      <authContext.Provider value={{email, setEmail,password, setPassword, handleauth,authToken }}>
       <RouterProvider router={router} />   
-      </MyContext.Provider>
+      </authContext.Provider>
     </div>
   );
 }

@@ -3,16 +3,16 @@ import { Googlesign } from "../signin/signIn";
 import confetti from "../../assets/images/forms/confetti.png"
 import { useState } from "react";
 import { useContext } from "react";
-import { MyContext } from "../../MyContext";
+import { authContext } from "../../MyContext";
 
 export const SignUp = () => {
 
 //declared states for form inputs
 const [userName, setUserName] = useState('');
-const {email, setEmail} = useContext(MyContext);
-const {password, setPassword}= useContext(MyContext);
+const {email, setEmail} = useContext(authContext);
+const {password, setPassword}= useContext(authContext);
 const [checkbox, setCheckbox] = useState(false);
-const {handleauth}= useContext(MyContext);
+const {handleauth}= useContext(authContext);
 const handleSubmit= (e)=>{
   e.preventDefault()
 }
