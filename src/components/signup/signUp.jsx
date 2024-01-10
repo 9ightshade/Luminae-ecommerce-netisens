@@ -3,7 +3,7 @@ import { Googlesign } from "../signin/signIn";
 import confetti from "../../assets/images/forms/confetti.png"
 import { useState } from "react";
 import { useContext } from "react";
-import { authContext } from "../../MyContext";
+import { authContext } from "../../context/MyContext";
 import { useNavigate } from "react-router-dom";
 
 

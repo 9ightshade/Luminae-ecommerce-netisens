@@ -6,8 +6,13 @@ import { Signin } from "./category/signin";
 import { Favourite } from "./category/favourite";
 import { NavAds } from "./category/NavAds";
 import { NavLink } from "react-router-dom";
-
+import { useContext } from "react";
+import {}
+import { authContext } from "../../context/MyContext";
 export const NavCategory = () => {
+
+
+
   return (
     <div className="flex justify-around items-center py-2 px-5 text-[13px]">
       <Categories />
@@ -21,7 +26,7 @@ export const NavCategory = () => {
         <NavAds />
       </div>
 
-     <Signin />
+     {!authToken?<Signin />:null}
       <Favourite />
       <Cartbag />
     </div>

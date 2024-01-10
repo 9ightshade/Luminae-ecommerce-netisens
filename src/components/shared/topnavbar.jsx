@@ -1,6 +1,4 @@
 import { Logo } from "../shared/logo";
-import { useState } from "react";
-import hamburger from "../../assets/images/icons/header/Menue.svg";
 import { Cartbag } from "./cartbag";
 import { Search } from "./search";
 import { Aboutus } from "./aboutus";

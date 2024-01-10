@@ -1,6 +1,6 @@
 import {  useState, useEffect} from "react";
 import { Home } from "./pages/Home";
-import { authContext } from "./MyContext";
+import { authContext } from "./context/MyContext.js";
 import {
   createBrowserRouter,
   RouterProvider, 
@@ -15,6 +15,7 @@ import { SignUpPage } from './pages/SignUpPage.jsx';
 import { Changepassword } from './components/signup/forgotten.jsx';
 import {app} from './firebase-config.js'
 import {getAuth,signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
+import { ListOfProduct } from "./pages/ListOfProduct.jsx";
 
 
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
     path: "*",
     element: <Error/>
   },
+  {
+    path: "/Product",
+    element: <ListOfProduct/>
+  }
 ]);
 
 

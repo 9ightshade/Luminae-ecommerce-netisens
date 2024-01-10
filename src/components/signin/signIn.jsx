@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
 import { useState } from "react";
-import { authContext } from "../../MyContext";
+import { authContext } from "../../context/MyContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";

@@ -1,6 +1,10 @@
 import search from "../../assets/images/icons/header/Search.png";
 
 export const Search = () => {
+
+
+
+
   return (
     <div className=" border rounded">
       <div className="flex justify-start items-center md:max-lg:w-[350px] lg:w-[280px] mx-[15px] ">
