@@ -38,7 +38,7 @@ authToken?navigate('/'):navigate('/SignIn');
       <div className="p-[20px] md:p-0">
         <Navbar />
         <Productcategory/>
-        <Productlist/>
+       
       </div>
 
       <div className="md:hidden my-[20px] p-[20px] md:p-0">
