@@ -4,6 +4,8 @@ import confetti from "../../assets/images/forms/confetti.png"
 import { useState } from "react";
 import { useContext } from "react";
 import { authContext } from "../../MyContext";
+import { useNavigate } from "react-router-dom";
+
 
 export const SignUp = () => {
 
@@ -13,6 +15,7 @@ const {email, setEmail} = useContext(authContext);
 const {password, setPassword}= useContext(authContext);
 const [checkbox, setCheckbox] = useState(false);
 const {handleauth}= useContext(authContext);
+let navigate = useNavigate();
 const handleSubmit= (e)=>{
   e.preventDefault()
 }
@@ -87,7 +90,7 @@ font-[400]"
           lets users know they’re reading a terms and conditions agreement
         </p>
       </section>
-      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase"onClick={()=>{handleauth(1)}} >
+      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase"onClick={()=>{handleauth(1,navigate)}} >
         Sign up
       </button>
 

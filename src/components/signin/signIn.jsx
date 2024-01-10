@@ -18,6 +18,7 @@ let navigate = useNavigate();
 
 
 
+
 const {handleauth} = useContext(authContext);
 
 //func to prevent default form submit 
@@ -79,7 +80,7 @@ const handleSubmit = (e)=>{
       <button
         type="submit"
         className="rounded-[4px] w-[100%] focus:bg-[#4172DC] hover:bg-[#4172DC] bg-[#C4C4C4] text-[#FFF] text-center text-[.8rem] font-[500] p-[1em] uppercase"
-        onClick={()=>{handleauth(2)}}
+        onClick={()=>{handleauth(2, navigate)}}
       >
         sign in
       </button>

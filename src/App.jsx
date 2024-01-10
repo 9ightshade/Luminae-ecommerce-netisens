@@ -1,4 +1,4 @@
-import {  useState} from "react";
+import {  useState, useEffect} from "react";
 import { Home } from "./pages/Home";
 import { authContext } from "./MyContext";
 import {
@@ -54,50 +54,48 @@ const router = createBrowserRouter([
 function App() {
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
+
 let authToken;
+
+
 
 
 
 //handles authentication
 
 
-const handleauth = (id)=>{
-const authentication = getAuth();
-console.log(id);
+const handleauth =  async (id,  navigate)=>{
+
+const auth = getAuth();
 
 //sign up condition
-if(id == 1){
+if( id === 1){ createUserWithEmailAndPassword(auth, email, password)
+.then((response)=>{
+  let res = response;
+  console.log(res);
+  navigate('/')
+sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+authToken = sessionStorage.getItem('Auth Token');
+})
+.catch((error)=>{
+  console.log(error);
+})}
 
-  console.log(email,password);
-  createUserWithEmailAndPassword(authentication, email, password)
-  .then((response) =>{
-    let res = response;
-   console.log("promise fulfilled:", res);
-    sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
-    authToken = sessionStorage.getItem('Auth Token');
-    navigate('/')
+//sign in condition 
+else if (id === 2){ signInWithEmailAndPassword(auth, email, password)
+.then((response)=>{
+let res = response;
+console.log("promise fulfilled:", res);
+sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+authToken = sessionStorage.getItem('Auth Token');
+console.log(authToken);
+navigate('/')
   })
-  .catch((error) =>{
-  console.log(error.code);
-  })
-}
-//sign in condition
-else if(id==2){
-  signInWithEmailAndPassword(authentication, email, password)
-  .then((response)=>{
-    let res = response;
-   console.log("promise fulfilled:", res);
-   sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
-    authToken = sessionStorage.getItem('Auth Token');
-   console.log(authToken);
-   navigate('/')
-  })
-  .catch((error)=>{
-    console.log(error);
-  })
+.catch((error)=>{
+console.log(error);
+  })}
 }
 
-}
 
   return (
     <div>
