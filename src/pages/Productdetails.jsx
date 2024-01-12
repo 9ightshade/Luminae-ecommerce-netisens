@@ -16,6 +16,7 @@ import { ProductDetailsInfo } from "../components/product details/ProductDetails
 import { ProductDetailsReview } from "../components/product details/ProductDetailsReview";
 
 export const Productdetails = () => {
+
   return (
     <div>
       <div className="md:hidden">

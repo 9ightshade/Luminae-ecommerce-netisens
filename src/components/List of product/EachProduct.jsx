@@ -9,8 +9,9 @@ import uniqlo2 from "../../assets/images/top100cardpictures/uniqlo2.png";
 import star from "../../assets/images/top100cardpictures/star.svg";
 import love from "../../assets/images/top100cardpictures/love.svg";
 import { Starratings } from "../flashsales/starratings";
-import { useState, useEffect } from "react";
-
+import { useState, useEffect, useContext, } from "react";
+import { useNavigate } from "react-router-dom";
+import { authContext } from "../../context/MyContext";
 
 const tophundredArray = [
   {
@@ -96,28 +97,44 @@ const tophundredArray = [
 ];
 
 export const EachProduct = () => {
-const [data, setData] = useState([]);
+let errorcode;
+const {data, setData} = useContext(authContext);
+const navigate = useNavigate();
 const url= "https://fakestoreapi.com/products";
+const {productId, setProductId} = useContext(authContext);
 const fetchApi = ()=>{
   
 fetch(url)
 .then((res)=> res.json())
 .then((obj)=> setData(obj))
 .then(()=>{console.log(data);})
-.catch((error)=>{console.log("Api call failed",error);})
+.catch((error)=>{
+   console.log("api call fail");
+})
 
 }
 
 useEffect(()=>{
   fetchApi()
 },[])
+
+//function to navigate to product detail
+const handleclickedItem = (clickedproductId)=>{
+// navigate('/Productdetails')
+console.log(clickedproductId);
+setProductId(clickedproductId);
+console.log(productId);
+}
+
+
   return (
     <div className="flex flex-wrap justify-around lg:overflow-x-none md:justify-center md:flex lg:mx-[20px]">
+      
       {data.map((product) => (
         <div
           className=" min-w-[250px] w-[150px] sm:max-md:block border-none p-1 shadow rounded-xl my-2 lg:w-[250px] flex-col justify-start 
           items-start inline-flex md:max-lg:w-[250px] border md:max-lg:mx-[15px] md:max-lg:my-[10px] lg:mx-[10px] "
-          key={product.id}
+          key={product.id} onClick={()=>{handleclickedItem(product.id)}}
         >
           <div className="md:max-lg:w-[100%] ">
             <img

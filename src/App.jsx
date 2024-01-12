@@ -16,6 +16,7 @@ import { Changepassword } from './components/signup/forgotten.jsx';
 import {app} from './firebase-config.js'
 import {getAuth,signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
 import { ListOfProduct } from "./pages/ListOfProduct.jsx";
+import { Productdetails } from "./pages/Productdetails.jsx";
 
 
 
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/Product",
     element: <ListOfProduct/>
+  },
+  {
+    path: "/Productdetails",
+    element: <Productdetails/>
   }
 ]);
 
@@ -59,7 +64,8 @@ const router = createBrowserRouter([
 function App() {
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
-
+const [productId, setProductId]  = useState(0);
+const [data, setData] = useState([]);
 let authToken;
 
 
@@ -105,7 +111,7 @@ console.log(error);
   return (
     <div>
 
-      <authContext.Provider value={{email, setEmail,password, setPassword, handleauth,authToken }}>
+      <authContext.Provider value={{email, setEmail,password, setPassword, productId, setProductId, data, setData, handleauth,authToken }}>
       <RouterProvider router={router} />   
       </authContext.Provider>
     </div>
