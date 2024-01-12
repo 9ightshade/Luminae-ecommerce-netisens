@@ -6,9 +6,7 @@ import { Signin } from "./category/signin";
 import { Favourite } from "./category/favourite";
 import { NavAds } from "./category/NavAds";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
-import {}
-import { authContext } from "../../context/MyContext";
+
 export const NavCategory = () => {
 
 
@@ -26,7 +24,7 @@ export const NavCategory = () => {
         <NavAds />
       </div>
 
-     {!authToken?<Signin />:null}
+     <Signin />
       <Favourite />
       <Cartbag />
     </div>

@@ -78,7 +78,7 @@ if( id === 1){ createUserWithEmailAndPassword(auth, email, password)
 .then((response)=>{
   let res = response;
   console.log(res);
-  navigate('/')
+  navigate('/Product')
 sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
 authToken = sessionStorage.getItem('Auth Token');
 })
@@ -94,7 +94,7 @@ console.log("promise fulfilled:", res);
 sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
 authToken = sessionStorage.getItem('Auth Token');
 console.log(authToken);
-navigate('/')
+navigate('/Product')
   })
 .catch((error)=>{
 console.log(error);
