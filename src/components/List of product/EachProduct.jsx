@@ -9,6 +9,7 @@ import uniqlo2 from "../../assets/images/top100cardpictures/uniqlo2.png";
 import star from "../../assets/images/top100cardpictures/star.svg";
 import love from "../../assets/images/top100cardpictures/love.svg";
 import { Starratings } from "../flashsales/starratings";
+import { useState, useEffect } from "react";
 
 
 const tophundredArray = [
@@ -95,41 +96,55 @@ const tophundredArray = [
 ];
 
 export const EachProduct = () => {
+const [data, setData] = useState([]);
+const url= "https://fakestoreapi.com/products";
+const fetchApi = ()=>{
+  
+fetch(url)
+.then((res)=> res.json())
+.then((obj)=> setData(obj))
+.then(()=>{console.log(data);})
+.catch((error)=>{console.log("Api call failed",error);})
 
+}
+
+useEffect(()=>{
+  fetchApi()
+},[])
   return (
     <div className="flex flex-wrap justify-around lg:overflow-x-none md:justify-center md:flex lg:mx-[20px]">
-      {tophundredArray.map((tophundred) => (
+      {data.map((product) => (
         <div
           className=" min-w-[250px] w-[150px] sm:max-md:block border-none p-1 shadow rounded-xl my-2 lg:w-[250px] flex-col justify-start 
           items-start inline-flex md:max-lg:w-[250px] border md:max-lg:mx-[15px] md:max-lg:my-[10px] lg:mx-[10px] "
-          key={tophundred.id}
+          key={product.id}
         >
           <div className="md:max-lg:w-[100%] ">
             <img
               className="self-stretch h-full grow shrink basis-0 rounded-tl-lg rounded-tr-lg block md:hidden lg:hidden"
-              src={tophundred.image1}
+              src={product.image}
             />
             <img
               className="self-stretch h-full grow shrink basis-0 rounded-tl-lg rounded-tr-lg hidden md:block lg:hidden "
-              src={tophundred.image2}
+              src={product.image}
             />
             <img
               className="self-stretch h-full grow shrink basis-0 rounded-tl-lg rounded-tr-lg hidden lg:block lg:h-[300px] "
-              src={tophundred.image1}
+              src={product.image}
             />
           </div>
           <div className="self-stretch h-[153px] p-5 bg-white flex-col justify-start items-start gap-3 flex">
             <div className="self-stretch h-11 justify-start items-center gap-5 flex">
               <div className="grow shrink basis-0 flex-col justify-center items-start gap-1 inline-flex">
                 <div className="text-neutral-800 text-[14px] font-bold  leading-tight">
-                  {tophundred.name}
+                  {product.title}
                 </div>
                 <div className="text-neutral-600 text-[11px] font-normal  leading-tight">
-                  {tophundred.description}
+                  {product.category}
                 </div>
               </div>
               <div>
-                <img src={tophundred.loveImg} alt={tophundred.name} />
+                <img src={love} alt={product.description} />
               </div>
             </div>
             <div className="self-stretch h-[25px] justify-start items-center gap-3 inline-flex">
@@ -137,18 +152,18 @@ export const EachProduct = () => {
                 <Starratings />
               </div>
               <div className="text-center text-neutral-600 text-xs font-normal font-['Lato'] leading-tight">
-                {tophundred.rated}
+                {product.rating.rate}
               </div>
             </div>
             <div className="self-stretch h-5 justify-start items-center gap-3 inline-flex">
               <div className="text-orange-600 text-[17px] font-extrabold leading-tight">
-                {tophundred.oldPrice}
+                {product.rating.count}
               </div>
               <div className="text-neutral-400  font-normal  leading-tight">
-                {tophundred.currentPrice}
+                {product.price}
               </div>
               <div className="text-orange-600 text-xs text-[14px] leading-tight">
-                {tophundred.discountPercentage}
+                {product.price}
               </div>
             </div>
           </div>
