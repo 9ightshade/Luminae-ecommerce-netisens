@@ -97,35 +97,37 @@ const tophundredArray = [
 ];
 
 export const EachProduct = () => {
-let errorcode;
+
 const {data, setData} = useContext(authContext);
 const navigate = useNavigate();
 const url= "https://fakestoreapi.com/products";
+
 const {productId, setProductId} = useContext(authContext);
+
+
 const fetchApi = ()=>{
-  
 fetch(url)
 .then((res)=> res.json())
-.then((obj)=> setData(obj))
-.then(()=>{console.log(data);})
+.then((db)=> setData(db))
 .catch((error)=>{
-   console.log("api call fail");
+   console.log("api call fail",error);
 })
-
 }
+
+
 
 useEffect(()=>{
   fetchApi()
 },[])
+console.log(data)
 
-//function to navigate to product detail
+//function to navigate to product detail and get clicked product id
 const handleclickedItem = (clickedproductId)=>{
-// navigate('/Productdetails')
+navigate('/Productdetails',{productId:clickedproductId})
 console.log(clickedproductId);
 setProductId(clickedproductId);
-console.log(productId);
 }
-
+console.log(productId);
 
   return (
     <div className="flex flex-wrap justify-around lg:overflow-x-none md:justify-center md:flex lg:mx-[20px]">
