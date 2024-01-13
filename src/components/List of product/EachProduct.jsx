@@ -178,12 +178,12 @@ console.log(productId);
               <div className="text-orange-600 text-[17px] font-extrabold leading-tight">
                 {product.rating.count}
               </div>
-              <div className="text-neutral-400  font-normal  leading-tight">
-                {product.price}
-              </div>
-              <div className="text-orange-600 text-xs text-[14px] leading-tight">
-                {product.price}
-              </div>
+              <p className="text-neutral-400  font-normal  leading-tight">
+                ${product.price}
+              </p>
+              <p className="text-orange-600 text-xs text-[14px] leading-tight">
+                ${product.price}
+              </p>
             </div>
           </div>
         </div>
