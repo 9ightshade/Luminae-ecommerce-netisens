@@ -58,7 +58,7 @@ return(
       <img
         src={product.image}
         alt={product.description}
-        className="h-full w-full "
+        className="h-full w-full"
       />
     </div>
 

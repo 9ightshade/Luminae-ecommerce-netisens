@@ -2,7 +2,10 @@ import React from 'react'
 import star from "../../assets/images/top100cardpictures/star.svg"
 import { ReviewRange } from './ReviewRange';
 
-export const ProductDetailsReview = () => {
+export const ProductDetailsReview = ({productDescription, productRating}) => {
+  console.log(`product Description:${productDescription}, product Rating:${}` );
+
+  
   return (
     <div>
       <div>
@@ -31,7 +34,7 @@ export const ProductDetailsReview = () => {
               <img src={star} alt="" />
               <img src={star} alt="" />
             </div>
-            <p>4.8/5</p>
+            <p>{productRating}</p>
           </div>
           <p className=" text-[13px] p-2 rounded font-bold border-[1.5px] border-black mt-[35px] ">
             Write a customer review

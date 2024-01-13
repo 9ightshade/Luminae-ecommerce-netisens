@@ -27,12 +27,14 @@ const tabletheroimg = tablethero;
 
 export const Home = () => {
 const navigate= useNavigate();
-  useEffect(()=>{
-let authToken = sessionStorage.getItem('Auth Token')
+//   useEffect(()=>{
+// let authToken = sessionStorage.getItem('Auth Token')
 
-//if user is signed in navigate to home if not navigate to sign in
-authToken?navigate('/'):navigate('/SignIn');
-  },[])
+// //if user is signed in navigate to home if not navigate to sign in
+// authToken?navigate('/'):navigate('/SignIn');
+//   },[])
+
+
   return (
     <div className="">
       <div className="p-[20px] md:p-0">
