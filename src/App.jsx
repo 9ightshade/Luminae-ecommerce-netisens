@@ -75,23 +75,23 @@ let authToken;
 //handles authentication
 
 
-const handleauth =  async (id,  navigate)=>{
+const handleauth = (id,  navigate)=>{
 
 const auth = getAuth();
 
 //sign up condition
 if( id === 1){ createUserWithEmailAndPassword(auth, email, password)
 .then((response)=>{
-  let res = response;
-  console.log(res);
-  navigate('/Product')
+let res = response;
+console.log(res);
+navigate('/Product')
 sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
-authToken = sessionStorage.getItem('Auth Token');
-})
+authToken = sessionStorage.getItem('Auth Token');})
 .catch((error)=>{
   console.log(error);
 })}
 
+  
 //sign in condition 
 else if (id === 2){ signInWithEmailAndPassword(auth, email, password)
 .then((response)=>{
@@ -100,8 +100,7 @@ console.log("promise fulfilled:", res);
 sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
 authToken = sessionStorage.getItem('Auth Token');
 console.log(authToken);
-navigate('/Product')
-  })
+navigate('/Product')})
 .catch((error)=>{
 console.log(error);
   })}

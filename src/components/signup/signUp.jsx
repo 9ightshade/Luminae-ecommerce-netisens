@@ -90,7 +90,7 @@ font-[400]"
           lets users know they’re reading a terms and conditions agreement
         </p>
       </section>
-      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase"onClick={()=>{handleauth(1,navigate)}} >
+      <button className="rounded-[4px] transition-all focus:bg-[#4172DC] hover:bg-[#4172DC] py-[1em]  bg-[#C4C4C4] text-[#FFF] text-center text-[14px] font-[500] w-[100%] uppercase"onClick={()=>{handleauth(1,navigate)}}>
         Sign up
       </button>
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import productdetailsmainclothe from "../../assets/images/product details images/productdetailsmainclothe.png";
 import productdetailsminiimg1 from "../../assets/images/product details images/productdetailsminiimg1.png";
 import productdetailsminiimg2 from "../../assets/images/product details images/productdetailsminiimg2.png";
