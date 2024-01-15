@@ -1,5 +1,5 @@
 import resetemail from "../../assets/images/forms/reset_email.png";
-import x from "../../assets/images/forms/x.svg";
+import x from "../../assets/images/forms/X.svg";
 import { NavLink } from "react-router-dom";
 export const Changepassword = () => {
   return (
@@ -61,7 +61,9 @@ export const ResetPassword = () => {
   return (
     <div className="w-[95%] hidden py-[1.8em] px-[3em] md:w-[95%] absolute top-[44%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto text-center max-w-[500px] rounded-[8px] bg-white">
       <div className="flex justify-end">
+
         <img src={x} alt="cancel button"/>
+
       </div>
       <div className="mx-[auto] w-[20%]">
         <img src={resetemail} alt="" className="w-[100%]" />
