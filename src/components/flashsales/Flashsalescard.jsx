@@ -5,6 +5,7 @@ import reebokshoe from "../../assets/images/flashsales/reebokshoe.png";
 import pinkshoe from "../../assets/images/flashsales/pinkbag.png";
 import blackshoe from "../../assets/images/flashsales/blackshoe.png";
 import { Starratings } from "./starratings";
+import CountdownTimer from "../countdown timer/countdown";
 
 const productarray = [
   {
@@ -21,6 +22,7 @@ const productarray = [
     oldPrice: "129.99",
     currentPrice: "69.99",
     discountPercentage: "-40%",
+    endTime: "2024-01-31T00:00:00",
   },
   {
     id: 1,
@@ -36,6 +38,7 @@ const productarray = [
     oldPrice: "129.99",
     currentPrice: "112.99",
     discountPercentage: "-40%",
+    endTime: "2024-02-15T14:30:00",
   },
   {
     id: 2,
@@ -51,6 +54,7 @@ const productarray = [
     oldPrice: "129.99",
     currentPrice: "69.99",
     discountPercentage: "-40%",
+    endTime: "2024-02-15T12:30:00",
   },
   {
     id: 3,
@@ -66,6 +70,7 @@ const productarray = [
     oldPrice: "$129.99",
     currentPrice: "$80.00",
     discountPercentage: "-40%",
+    endTime: "2024-02-15T18:30:00",
   },
 ];
 
@@ -84,7 +89,8 @@ export const Flashsalescard = () => {
 
             <div className="">
               <p className=" tracking-widest break-words font-bold text-xl text-center">
-                {item.countdown}
+                {/* {item.countdown} */}
+                <CountdownTimer endTime={item.endTime} />
               </p>
               <div className="w-[150px] justify-between text-center flex m-auto pl-8 pr-8 pt-1 text-xs mb-4 ">
                 <p className="md:pr-[12px]">{item.hour}</p>

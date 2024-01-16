@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export const Productcategory = () => {
   return (
     <div>
-      <ul className="flex justify-around text-[12px] px-8 mt-10 relative">
+      <ul className="md:flex justify-around text-[12px] px-8 mt-10 relative hidden">
         <li className="font-bold text-orange-600">Women</li>
         <li>
           <a href="#">Male</a>

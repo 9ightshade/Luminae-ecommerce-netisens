@@ -10,6 +10,8 @@ import uniqlo2 from "../../assets/images/top100cardpictures/uniqlo2.png";
 import star from "../../assets/images/top100cardpictures/star.svg";
 import love from "../../assets/images/top100cardpictures/love.svg";
 import { Starratings } from "../flashsales/starratings";
+import { Like } from "../Like/like";
+import ProductRating from "../../assets/ratings/Rating";
 
 const tophundredArray = [
   {
@@ -77,9 +79,9 @@ export const Tophundredproduct = () => {
           items-start inline-flex md:max-lg:w-[auto] border md:max-lg:mx-[15px] md:max-lg:my-[10px] lg:mx-[10px] "
           key={tophundred.id}
         >
-          <div className="md:max-lg:w-[330px] ">
+          <div className="md:max-lg:w-[330px] lg:h-[300px] block m-auto ">
             <img
-              className="self-stretch h-full grow shrink basis-0 rounded-tl-lg rounded-tr-lg block md:hidden lg:hidden"
+              className="self-stretch h-full grow shrink basis-0 rounded-tl-lg rounded-tr-lg block md:hidden lg:hidden "
               src={tophundred.image1}
             />
             <img
@@ -87,7 +89,7 @@ export const Tophundredproduct = () => {
               src={tophundred.image2}
             />
             <img
-              className="self-stretch h-full grow shrink basis-0 rounded-tl-lg rounded-tr-lg hidden md:hidden lg:block "
+              className="self-stretch h-full grow shrink basis-0 rounded-tl-lg rounded-tr-lg hidden md:hidden lg:block lg:w-full "
               src={tophundred.image1}
             />
           </div>
@@ -102,12 +104,14 @@ export const Tophundredproduct = () => {
                 </div>
               </div>
               <div>
-                <img src={tophundred.loveImg} alt={tophundred.name} />
+                {/* <img src={tophundred.loveImg} alt={tophundred.name} /> */}
+                <Like />
               </div>
             </div>
             <div className="self-stretch h-[25px] justify-start items-center gap-3 inline-flex">
               <div className="justify-start items-center flex">
                 <Starratings />
+                {/* <ProductRating initialRating={3.5} /> */}
               </div>
               <div className="text-center text-neutral-600 text-xs font-normal font-['Lato'] leading-tight">
                 {tophundred.rated}
