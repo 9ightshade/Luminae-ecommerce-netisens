@@ -7,6 +7,11 @@
 * {
   font-family: "Lato", sans-serif;
 }
+/* #password{
+background-image: url("./assets/images/forms/show_pass.svg");
+background-repeat: no-repeat;
+background-position: 96% 50%;
+} */
 hr {
   width: 40%;
   height: 1px;

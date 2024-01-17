@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import googleLogo from "../../assets/images/forms/google-logo.png";
 import warningPolygon from "../../assets/images/forms/warning-polygon.svg";
+import eyeicon from "../../assets/images/forms/show_pass.svg"
 import { useState } from "react";
 import { authContext } from "../../context/MyContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+
 
 
 
@@ -14,6 +15,7 @@ export const SignIn = () => {
 const {password, setPassword}= useContext(authContext);
 const {email, setEmail} = useContext(authContext);
 const [checkbox, setCheckbox] = useState(false);
+const [showpass, setShowpass] = useState(false);
 let navigate = useNavigate();
 
 
@@ -43,21 +45,29 @@ const handleSubmit = (e)=>{
           onChange={(e)=>{setEmail(e.target.value)}}
           className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
         />
+   
       </label>
 
       <label
         htmlFor="password"
-        className="text-[#262626] text-[.8rem] font-[400]"
+        className="text-[#262626] text-[.8rem] font-[400] "
       >
         Password
-        <input
-          type="password"
+       
+      </label>
+<div className="flex" >
+<input
+          type={showpass?"password":"text"}
           name="password"
           id="password"
           onChange={(e)=>{setPassword(e.target.value)}}
-          className="block rounded-[4px] border-[#D9D9D9] p-[.7em] border-[1px] w-[100%]"
+          className="block rounded-[4px] border-[#D9D9D9] border-r-0 p-[.7em] border w-[100%]"
         />
-      </label>
+        <div className="border border-[#D9D9D9] border-l-0 pt-[.9em] px-[.7em] rounded-[4px]" >
+        <img src={eyeicon} alt="toggle password visiblity" onClick={()=>{setShowpass(!showpass)}} />
+        </div>
+</div>
+
 
       <section className="flex items-center justify-between">
         <label

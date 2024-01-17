@@ -23,6 +23,7 @@ export const NavCategory = () => {
       <div className="hidden lg:block">
         <NavAds />
       </div>
+      
 
      <Signin />
       <Favourite />
