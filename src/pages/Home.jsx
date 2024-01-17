@@ -137,7 +137,8 @@ const navigate= useNavigate();
           color="bg-sky-600"
         />
       </div>
-      <Newsletteremail/>
+      <div className="relative h-[100px]" ><Newsletteremail /></div>
+          
       <Footer />
     </div>
   );

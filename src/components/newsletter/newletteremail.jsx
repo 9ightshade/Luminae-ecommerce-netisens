@@ -2,37 +2,27 @@ import React from 'react'
 
 export const Newsletteremail = () => {
   return (
-    <div>
-      <div className="px-14 py-8 bg-slate-400 rounded-lg flex-col w-[70%] items-center gap-6 flex justify-center mx-auto">
-        <div className="self-stretch h-[63px] flex-col justify-center items-center gap-[23px] flex">
-          <div className="justify-center items-center inline-flex">
-            <div className="text-right flex gap-2 ">
-              <p className="text-white text-[32px] font-bold leading-tight">
-                Luminae
+      <div className=" hidden px-[1em] py-[2em]  bg-[#7296AB] md:flex flex-col gap-[1em]  mx-auto w-[80%] max-w-[700px] rounded-[9px] absolute top-[130%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
+    
+          <p className="text-white text-[2.8rem] text-center font-bold">
+                Luminae <span className="text-[#D1E2EB]" >Store</span> 
               </p>
-              <p className="text-slate-300 text-[32px] font-bold leading-tight">
-                Store
-              </p>
-            </div>
-          </div>
-
-          <div className="self-stretch justify-center items-center gap-2.5 inline-flex">
-            <p className="grow shrink basis-0 text-center text-white text-base font-normal font-['Lato'] leading-tight">
+        
+            <p className="text-center text-white text-[1.2rem]">
               Register your email not to miss the last minutes off+ Free
               delivery
             </p>
-          </div>
-        </div>
-
-        <div className="w-[90%] mx-auto px-[.5em] py-[.5em] flex bg-white rounded">
           
+        
+
+        <div className="w-[45%] mx-auto px-[.5em] py-[.5em] flex bg-white rounded">
             <input
               type="text"
               placeholder="Enter your email"
-              className=" w-[100%] px-[.7em] py-[.3em] text-neutral-400 text-sm font-normal"
+              className=" w-[100%] px-[.7em] py-[.3em] text-neutral-400 text-sm font-normal "
             />
         </div>
       </div>
-    </div>
+  
   );
 }
