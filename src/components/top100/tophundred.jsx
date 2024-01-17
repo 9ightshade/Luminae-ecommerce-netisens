@@ -79,7 +79,7 @@ export const Tophundredproduct = () => {
           items-start inline-flex md:max-lg:w-[auto] border md:max-lg:mx-[15px] md:max-lg:my-[10px] lg:mx-[10px] "
           key={tophundred.id}
         >
-          <div className="md:max-lg:w-[330px] lg:h-[300px] block m-auto ">
+          <div className="md:max-lg:w-[330px] lg:h-[x] block m-auto ">
             <img
               className="self-stretch h-full grow shrink basis-0 rounded-tl-lg rounded-tr-lg block md:hidden lg:hidden "
               src={tophundred.image1}

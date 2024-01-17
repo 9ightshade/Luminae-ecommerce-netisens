@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = ({ endTime }) => {
   const calculateTimeLeft = () => {
@@ -26,9 +26,7 @@ const CountdownTimer = ({ endTime }) => {
     return () => clearTimeout(timer);
   });
 
-  const formattedTime = `${String(timeLeft.hours).padStart(2, "0")}:${String(
-    timeLeft.minutes
-  ).padStart(2, "0")}:${String(timeLeft.seconds).padStart(2, "0")}`;
+  const formattedTime = `${String(timeLeft.hours).padStart(2, '0')}:${String(timeLeft.minutes).padStart(2, '0')}:${String(timeLeft.seconds).padStart(2, '0')}`;
 
   return (
     <div className="timer">
