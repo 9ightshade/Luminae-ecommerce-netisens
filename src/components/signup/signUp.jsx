@@ -1,6 +1,7 @@
 import { Googlesign } from "../signin/signIn";
 // import emailvector from "../../assets/images/forms/email_bg.svg"
 import confetti from "../../assets/images/forms/confetti.png"
+import eyeicon from "../../assets/images/forms/show_pass.svg"
 import { useState } from "react";
 import { useContext } from "react";
 import { authContext } from "../../context/MyContext";
@@ -14,6 +15,7 @@ const [userName, setUserName] = useState('');
 const {email, setEmail} = useContext(authContext);
 const {password, setPassword}= useContext(authContext);
 const [checkbox, setCheckbox] = useState(false);
+const [showpass, setShowpass] = useState(false);
 const {handleauth}= useContext(authContext);
 let navigate = useNavigate();
 const handleSubmit= (e)=>{
@@ -71,17 +73,22 @@ font-[400]"
       <label
         htmlFor="password"
         className="text-[#262626] text[.8rem] font-[400]"
-      >
-        Password
-        <input
-          type="password"
+      >Password
+      </label>
+<div className="flex" >
+<input
+          type={showpass?"text":"password"}
           name="password"
           id="password"
-          placeholder="password"
-         onChange={(e)=>{setPassword(e.target.value)}}
-          className="block rounded-[4px] border-[#D9D9D9] mb-[1em] p-[.7em] border-[1px] w-[100%]"
+          onChange={(e)=>{setPassword(e.target.value)}}
+          className="block rounded-[4px] border-[#D9D9D9] border-r-0 p-[.7em] border w-[100%]"
         />
-      </label>
+        <div className="border border-[#D9D9D9] border-l-0 pt-[.9em] px-[.7em] rounded-[4px]" >
+        <img src={eyeicon} alt="toggle password visiblity" onClick={()=>{setShowpass(!showpass)}} />
+        </div>
+</div>
+
+
 
       <section className="flex gap-[.6em]">
         <input type="checkbox" name="" id="" />

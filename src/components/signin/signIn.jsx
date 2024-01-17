@@ -57,7 +57,7 @@ const handleSubmit = (e)=>{
       </label>
 <div className="flex" >
 <input
-          type={showpass?"password":"text"}
+          type={showpass?"text":"password"}
           name="password"
           id="password"
           onChange={(e)=>{setPassword(e.target.value)}}
