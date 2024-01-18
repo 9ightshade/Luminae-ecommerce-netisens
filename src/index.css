@@ -17,7 +17,17 @@ hr {
   height: 1px;
   background: #d9d9d9;
 }
-
+li{
+  color: #555555;
+  font-family: "lato";
+}
+#product_category_list > li {
+  transition: all;
+  transition-duration: 0.2s;
+}
+#product_category_list > li:hover{
+color: #FF7A00;
+}
 .blogheroTb {
   background-image: url("../src/assets/images/blog-images/blogheroTB.png");
   background-position: center;

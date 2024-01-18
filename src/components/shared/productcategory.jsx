@@ -1,222 +1,184 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+
 
 export const Productcategory = () => {
+const [categoryVisible, setCategoryVisible] = useState(false);
   return (
     <div>
-      <ul className="md:flex justify-around text-[12px] px-8 mt-10 relative hidden">
-        <li className="font-bold text-orange-600">Women</li>
-        <li>
-          <a href="#">Male</a>
-          <div className="dropdown flex gap-4">
-            <div>
-              <div>
-                <ul>
-                  <p>SHOES & BAG</p>
-                  <li>
-                    <a href="#">Casual Shoes</a>
-                  </li>
-                  <li>
-                    <a href="#">Boot</a>
-                  </li>
-                  <li>
-                    <a href="#">Sandals</a>
-                  </li>
-                  <li>
-                    <a href="#">Slippers</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <p> Luxury & designer</p>
-                  <li>
-                    <a href="#">
-                      Towels
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Bathroom Scales
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Bath Mats
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Showers Caps
-                      </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <ul>
-                  <p>HOME TEXTILE</p>
-                  <li>
-                    <a href="#">
-                      Beddings
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Pillows
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Handkerchief Towels
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Curtain
-                      </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <p>COSMETICS</p>
-                  <li>
-                    <a href="#">
-                      Shampoo and Conditioner
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Styling Products
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Hair Accessories
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Men's Grooming
-                      </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <ul>
-                  <p>PARTY SUPPLIES</p>
-                  <li>
-                    <a href="#">
-                      Event & Party
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Christmas
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Artificial Decorations
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">Wedding</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <p>SPORT & OUTDOORS</p>
-                  <li>
-                    <a href="#">Team Sports</a>
-                  </li>
-                  <li>
-                    <a href="#">Water Sports</a>
-                  </li>
-                  <li>
-                    <a href="#">Outdoor Recreation</a>
-                  </li>
-                  <li>
-                    <a href="#">Fitness Equipment</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <ul>
-                  <li>
-                    <a href="#">Bottoms</a>
-                  </li>
-                  <li>
-                    <a href="#">Women's Clothing</a>
-                  </li>
-                  <li>
-                    <a href="#">T-Shirts and Tops</a>
-                  </li>
-                  <li>
-                    <a href="#">Dresses</a>
-                  </li>
-                  <li>
-                    <a href="#">Outerwears</a>
-                  </li>
-                  <li>
-                    <a href="#">Formal Wear</a>
-                  </li>
-                  <li>
-                    <a href="#">Casual Wear</a>
-                  </li>
-                  <li>
-                    <a href="#">Seasonal Collections</a>
-                  </li>
-                  <li>
-                    <a href="#">Sport Bras</a>
-                  </li>
-                  <li>
-                    <a href="#">Workout Tops</a>
-                  </li>
-                  <li>
-                    <a href="#">Fall Wardrobe</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <ul className="md:flex justify-around text-[12px] px-[2em] pt-[2em] relative hidden" id="product_category_list" >
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+          Women
+          </li>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+          Male
+          </li>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+          Mother-Child
         </li>
-
-
-        <li>
-          <a href="#">Mother-Child</a>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+          Home & Furniture
         </li>
-        <li>
-          <a href="#">Home & Furniture</a>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+          Supermarket
         </li>
-        <li>
-          <a href="#">Super market</a>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+          Cosmetics
         </li>
-        <li>
-          <a href="#">Cosmetics</a>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+        Show & Bag
         </li>
-        <li>
-          <a href="#">Show & Bag</a>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+          Electronic
         </li>
-        <li>
-          <a href="#">Electronic</a>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+        Sport & Outdoor
         </li>
-        <li>
-          <a href="#">Sport & Outdoor</a>
-        </li>
-        <li>
-          <a href="#">Best seller</a>
+        <li onClick={()=>{
+          if(categoryVisible === false )
+          setCategoryVisible(true)
+        else{
+          setCategoryVisible(false)
+        }
+        }} >
+          Best seller
         </li>
       </ul>
+      {categoryVisible?<ProductCategoryDropdown/>:null}
     </div>
   );
 };
+
+
+export const ProductCategoryDropdown = ()=>{
+
+return(
+<div className="md:flex gap-[2em] bg-white md:w-[80%] md:mx-auto absolute left-[2em] rounded-[8px]" >
+<div className=" flex justify-around md:gap-[2em] p-[1em]" >
+  <div>
+    <ul>
+      <li className="font-bold my-[.7em]" >Shoe & Bag</li>
+      <li>Casual Shoes</li>
+      <li>Boots</li>
+      <li>Sandals</li>
+      <li>Slippers</li>
+    </ul>
+    <ul>
+      <li className="font-bold my-[.7em]" >Luxury & designer</li>
+      <li>Towels</li>
+      <li>Bathroom Scales</li>
+      <li>Bath Mats</li>
+      <li>Shower Caps</li>
+    </ul>
+   
+  </div>
+  <div className="" >
+  <ul >
+      <li className="font-bold my-[.7em]" >Home Textile</li>
+      <li>Bedding</li>
+      <li>Pillows</li>
+      <li>Handkerchief Towels</li>
+      <li>Curtain</li>
+    </ul>
+
+    <ul>
+      <li className="font-bold my-[.7em]" >Cosmetics</li>
+      <li>Shampoo and Conditioner</li>
+      <li>Styling Products</li>
+      <li>Hair Accessories</li>
+      <li>Men's Grooming</li>
+    </ul>
+  </div>
+</div>
+<div className="flex p-[1em]  justify-around md:gap-[3em]">
+<div className="flex flex-col gap-[1em]" >
+  <ul>
+    <li className="font-bold my-[.7em]" >Party Supplies</li>
+    <li>Event & Party</li>
+    <li>Christmas</li>
+    <li>Artificial Decorations</li>
+    <li>Wedding</li>
+  </ul>
+
+
+  <ul>
+    <li className="font-bold my-[.7em]" >Sport & Outdoors</li>
+    <li>Team Sports</li>
+    <li>Water Sports</li>
+    <li>Outdoor Recreation</li>
+    <li>Fitness Equipment</li>
+  </ul>
+</div>
+<div>
+  <ul>
+    <li className="font-bold my-[.7em] " >Clothes</li>
+    <li>Bottoms</li>
+    <li>Women's Clothing</li>
+    <li>T-Shirts and Tops</li>
+    <li>Dresses</li>
+    <li>Outerwear</li>
+    <li>Formal Wear</li>
+    <li>Casual Wear</li>
+    <li>Seasonal Collections</li>
+    <li>Sports Bras</li>
+    <li>Workout Tops</li>
+    <li>Fall Wardrobe</li>
+  </ul>
+</div>
+</div>
+</div>
+)}
