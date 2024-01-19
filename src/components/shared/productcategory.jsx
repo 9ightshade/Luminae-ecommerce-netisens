@@ -112,7 +112,7 @@ const [categoryVisible, setCategoryVisible] = useState(false);
 export const ProductCategoryDropdown = ()=>{
 
 const {data , setData} = useContext(authContext);
-const url= "https://fakestoreapi.com/products";
+const url= "https://fakestoreapi.com//products/1";
 
 const fetchApi = ()=>{
   fetch(url)
@@ -122,7 +122,7 @@ const fetchApi = ()=>{
      console.log("api call fail",error);
   })
   }
-
+console.log(data);
 
 return(
 <div className="w-full md:flex gap-[2em] bg-white md:w-[80%] md:mx-auto absolute left-0 md:left-[2em] md:top-[12.5em]   rounded-[8px] border " >
