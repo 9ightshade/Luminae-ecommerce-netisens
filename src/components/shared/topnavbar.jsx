@@ -46,9 +46,9 @@ export const Topnav = () => {
         <NavCategory />
       </div>
 
-      <div className="hidden ">
+      {/* <div className="hidden ">
         <Productcategory />
-      </div>
+      </div> */}
     </div>
   );
 };

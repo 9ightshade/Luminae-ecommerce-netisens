@@ -39,8 +39,9 @@ const navigate= useNavigate();
     <div className="">
       <div className="p-[20px] md:p-0">
         <Navbar />
-        <Productcategory/>
-       
+        <div className="hidden md:block">
+          <Productcategory />
+        </div>
       </div>
 
       <div className="md:hidden my-[20px] p-[20px] md:p-0">
@@ -137,8 +138,10 @@ const navigate= useNavigate();
           color="bg-sky-600"
         />
       </div>
-      <div className="relative h-[100px]" ><Newsletteremail /></div>
-          
+      <div className="relative h-[100px]">
+        <Newsletteremail />
+      </div>
+
       <Footer />
     </div>
   );

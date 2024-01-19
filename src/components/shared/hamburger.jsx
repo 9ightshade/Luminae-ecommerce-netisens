@@ -1,5 +1,6 @@
 import hamburger from "../../assets/images/icons/header/Menue.svg";
 import React, { useState, useRef, useEffect } from "react";
+import { ProductCategoryDropdown, Productcategory } from "./productcategory";
 
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,37 +34,9 @@ const HamburgerMenu = () => {
         <img src={hamburger} alt="Menu" />
       </button>
       {menuOpen && (
-        <div
-          ref={menuRef}
-          className="fixed top-0 left-0 h-auto w-full bg-gray-500 p-4 z-10 pl-[50px]"
-        >
-          <ul className="flex flex-col space-y-4">
-            <li>
-              <a href="#about" className="text-white">
-               Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="text-white">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#blog" className="text-white">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="text-white">
-                Contact Us
-              </a>
-            </li>
-            <li>
-              <a href="#help" className="text-white">
-                Help & Support
-              </a>
-            </li>
-          </ul>
+        <div ref={menuRef} className="">
+          {/* <ProductCategoryDropdown /> */}
+          <Productcategory />
         </div>
       )}
     </div>

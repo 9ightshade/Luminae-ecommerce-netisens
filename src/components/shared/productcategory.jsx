@@ -2,17 +2,21 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 
-export const Productcategory = () => {
+export const 
+Productcategory = () => {
 const [categoryVisible, setCategoryVisible] = useState(false);
   return (
     <div>
-      <ul className="md:flex justify-around text-[12px] px-[2em] pt-[2em] relative hidden" id="product_category_list" >
+      <ul className="md:flex justify-around text-[12px] px-[2em] pt-[2em]  
+      w-full gap-[1em] bg-white md:w-full md:mx-auto relative left-0  top- rounded-[8px]  " id="product_category_list 
+      " >
         <li onClick={()=>{
           if(categoryVisible === false )
           setCategoryVisible(true)
         else{
           setCategoryVisible(false)
         }
+
         }} >
           Women
           </li>
@@ -107,7 +111,7 @@ const [categoryVisible, setCategoryVisible] = useState(false);
 export const ProductCategoryDropdown = ()=>{
 
 return(
-<div className="md:flex gap-[2em] bg-white md:w-[80%] md:mx-auto absolute left-[2em] rounded-[8px]" >
+<div className="w-full md:flex gap-[2em] bg-white md:w-[80%] md:mx-auto absolute left-0 md:left-[2em]   rounded-[8px] border " >
 <div className=" flex justify-around md:gap-[2em] p-[1em]" >
   <div>
     <ul>
