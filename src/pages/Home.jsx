@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "../components/shared/navbar";
 import { MobileHero } from "../components/hero-section/mobilehero";
@@ -16,7 +15,8 @@ import { Slider } from "../components/slider";
 import { Footer } from "../components/footer/footer";
 import { Newsletteremail } from "../components/newsletter/newletteremail";
 import { Productcategory } from "../components/shared/productcategory";
-import { Productlist } from "../productlist";
+
+
 
 
 const image1 = headerimg1;
@@ -27,6 +27,8 @@ const tabletheroimg = tablethero;
 
 export const Home = () => {
 const navigate= useNavigate();
+
+
 //   useEffect(()=>{
 // let authToken = sessionStorage.getItem('Auth Token')
 

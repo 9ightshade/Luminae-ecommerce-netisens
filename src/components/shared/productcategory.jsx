@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { authContext } from "../../context/MyContext";
 
 
 export const 
@@ -110,12 +111,25 @@ const [categoryVisible, setCategoryVisible] = useState(false);
 
 export const ProductCategoryDropdown = ()=>{
 
+const {data , setData} = useContext(authContext);
+const url= "https://fakestoreapi.com/products";
+
+const fetchApi = ()=>{
+  fetch(url)
+  .then((res)=> res.json())
+  .then((db)=> setData(db))
+  .catch((error)=>{
+     console.log("api call fail",error);
+  })
+  }
+
+
 return(
 <div className="w-full md:flex gap-[2em] bg-white md:w-[80%] md:mx-auto absolute left-0 md:left-[2em] md:top-[12.5em]   rounded-[8px] border " >
 <div className=" flex justify-around md:gap-[2em] p-[1em]" >
   <div>
     <ul>
-      <li className="font-bold my-[.7em]" >Shoe & Bag</li>
+      <li className="font-bold my-[.7em]">Shoe & Bag</li>
       <li>Casual Shoes</li>
       <li>Boots</li>
       <li>Sandals</li>
