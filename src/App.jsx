@@ -17,6 +17,7 @@ import {app} from './firebase-config.js'
 import {getAuth,signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth"
 import { ListOfProduct } from "./pages/ListOfProduct.jsx";
 import { Productdetails } from "./pages/Productdetails.jsx";
+import { Checkout } from "./pages/Checkout.jsx";
 
 
 
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: "/Productdetails",
     element: <Productdetails/>
+  },
+  {
+    path: "/Checkout",
+    element: <Checkout/>
   }
 ]);
 
@@ -69,6 +74,7 @@ const [data, setData] = useState([]);
 const [cart, addToCart] = useState([]);
 let authToken;
 let invalidCredentials;
+let userAlreadyExist;
 // const useNavigat = useNavigate();
 
 
@@ -85,11 +91,13 @@ if( id === 1){ createUserWithEmailAndPassword(auth, email, password)
 .then((response)=>{
 let res = response;
 console.log(res);
-navigate('/Product')
+navigate('/SignIn')
 sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
 authToken = sessionStorage.getItem('Auth Token');})
 .catch((error)=>{
-  console.log(error);
+  userAlreadyExist= error;
+  // console.log(`userAlreadyExist:${userAlreadyExist}`)
+  // console.log(Boolean(userAlreadyExist));
 })}
 
   
@@ -114,7 +122,7 @@ console.log(Boolean(invalidCredentials));
   return (
     <div>
 
-      <authContext.Provider value={{email, setEmail,password, setPassword, productId, setProductId, data, setData, cart, addToCart, handleauth,authToken, invalidCredentials }}>
+      <authContext.Provider value={{email, setEmail,password, setPassword, productId, setProductId, data, setData, cart, addToCart, handleauth,authToken, invalidCredentials, userAlreadyExist }}>
       <RouterProvider router={router} />   
       </authContext.Provider>
     </div>

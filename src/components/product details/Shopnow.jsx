@@ -27,6 +27,7 @@ navigate('/Product')
 if(num === 2){
 
 console.log("shop now");
+navigate('/Checkout')
 
 }
 };

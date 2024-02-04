@@ -19,7 +19,7 @@ const [checkbox, setCheckbox] = useState(false);
 const [showpass, setShowpass] = useState(false);
 let navigate = useNavigate();
 
-
+// console.log(boolean(invalidCredentials));
 
 
 const {handleauth} = useContext(authContext);
@@ -32,9 +32,9 @@ const handleSubmit = (e)=>{
 
   return (
     <form  className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] " onSubmit={handleSubmit}>
-      {/* <p> */}
-       {/* Lorem, ipsum dolor. {invalidCredentials?"Invalid email or Password":null} */}
-      {/* </p> */}
+      <p> 
+        {invalidCredentials?"Invalid email or Password":null} 
+       </p> 
       <h1 className="text-[#000] text-[1.25rem] mb-[1em] font-[600]">
         Sign in
       </h1>
@@ -107,7 +107,7 @@ const handleSubmit = (e)=>{
         <hr />
       </section>
 
-      <Googlesign />
+      <Googlesign/>
 
       <p className="text-[#262626] text-[.8rem] font-[500] text-center lowercase">
         Don’t have an account?
@@ -129,11 +129,19 @@ const handleSubmit = (e)=>{
 
 
 export const Googlesign = () => {
-    
+
+let navigate = useNavigate();
+
+const redirectSignin = ()=>{
+
+  navigate('/SignIn')
+}
+
     return (
       <div>
         <button
           className="flex justify-center items-center p-[1em] gap-[.8em] rounded-[4px] text-[#FFF] text-[.8rem] font-[500] w-[100%] lowercase bg-[#434343]"
+          onClick={redirectSignin}
         >
           <img src={googleLogo} alt="google logo" />
           <p>Sign in by google</p>

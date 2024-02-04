@@ -16,16 +16,26 @@ const {email, setEmail} = useContext(authContext);
 const {password, setPassword}= useContext(authContext);
 const [checkbox, setCheckbox] = useState(false);
 const [showpass, setShowpass] = useState(false);
-const {handleauth}= useContext(authContext);
+const {handleauth, userAlreadyExist}= useContext(authContext);
+
+
+
 let navigate = useNavigate();
 const handleSubmit= (e)=>{
   e.preventDefault()
 }
 
-
+console.log(Boolean(`userAlreadyExist:${userAlreadyExist}`));
   return (
+
+<div>
+<p className="text-center" >
+  {userAlreadyExist?"User Already Exist":"Welcome New User"}
+</p>
     <form onSubmit={handleSubmit}
       className="w-[94%] max-w-[700px] py-[4em] relative space-y-[1em] mx-[auto]">
+
+
       <h1
         className="
             text-[#000]
@@ -114,6 +124,7 @@ font-[400]"
         <SignUpModal />
 
     </form>
+</div>
   );
 };
 
