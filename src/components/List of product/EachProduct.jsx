@@ -98,40 +98,49 @@ const tophundredArray = [
 
 export const EachProduct = () => {
 
-const {data, setData} = useContext(authContext);
+const {data, setData,cart} = useContext(authContext);
 const navigate = useNavigate();
 const url= "https://fakestoreapi.com/products";
 
 const {productId, setProductId} = useContext(authContext);
-
+let fetchFail;
 
 const fetchApi = ()=>{
 fetch(url)
 .then((res)=> res.json())
 .then((db)=> setData(db))
 .catch((error)=>{
-   console.log("api call fail",error);
+   fetchFail = error;
 })
 }
+
 
 
 
 useEffect(()=>{
   fetchApi()
 },[])
-console.log(data)
+console.log(`Database:${data}`)
+console.log(`current cart lenght: ${cart.length}`);
+// console.log(`fetchFail error:${Boolean(fetchFail)}`);
 
 //function to navigate to product detail and get clicked product id
 const handleclickedItem = (clickedproductId)=>{
 navigate('/Productdetails',{productId:clickedproductId})
-console.log(clickedproductId);
+console.log(`clickedproductId:${clickedproductId}`);
 setProductId(clickedproductId);
 }
-console.log(productId);
+console.log(`productId:${productId}`);
 
   return (
+<div>
+<p className="text-center" >
+  {fetchFail?"Unable to access the store please check your Internet connection and try again":null}
+</p>
     <div className="flex flex-wrap justify-around lg:overflow-x-none md:justify-center md:flex lg:mx-[20px]">
       
+
+
       {data.map((product) => (
         <div
           className=" min-w-[250px] w-[150px] sm:max-md:block border-none p-1 shadow rounded-xl my-2 lg:w-[250px] flex-col justify-start 
@@ -189,5 +198,7 @@ console.log(productId);
         </div>
       ))}
     </div>
+</div>
+   
   );
 };

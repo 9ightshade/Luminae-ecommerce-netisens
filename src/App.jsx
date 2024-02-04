@@ -69,7 +69,7 @@ const [data, setData] = useState([]);
 const [cart, addToCart] = useState([]);
 let authToken;
 let invalidCredentials;
-
+// const useNavigat = useNavigate();
 
 
 

@@ -15,7 +15,7 @@ export const ProductDetailsInfo = () => {
   return (
     <div className="block md:w-[300px] lg:w-[400px] ">
       {clickedProduct.map((product) => {
-        console.log(product.rating.count);
+        // console.log(product.rating.count);
 
         return (
           <div className="m-[20px]" key={product.id}>
