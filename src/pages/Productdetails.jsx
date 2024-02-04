@@ -19,7 +19,7 @@ export const Productdetails = () => {
 
   return (
     <div>
-      <div className="md:hidden">
+      {/* <div className="md:hidden">
         <ProductdetailsNavbar />
         <Productdetailsimages />
 
@@ -36,16 +36,16 @@ export const Productdetails = () => {
         <Shopnow />
         <Recommendations />
         <Footer />
-      </div>
+      </div> */}
 
-      <div className="hidden md:block">
+      <div className="">
         <ProductdetailsNavbar />
         <ProductimagesforTB />
         <ProductDetailsReview />
         <PeoplesReview />
         <hr className="w-full  border-[1.5px] my-[20px] mx-0 px-0" />
 
-        <div className="hidden md:block">
+        <div className="">
           <PeoplesReview />
         </div>
         <hr className="w-full  border-[1.5px] my-[20px] mx-0 px-0" />

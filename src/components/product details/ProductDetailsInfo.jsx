@@ -39,7 +39,7 @@ export const ProductDetailsInfo = () => {
 
             <div className="hidden md:block">
               <ProductPaymentAndAmount />
-              <Shopnow />
+              <Shopnow productId={productId} />
             </div>
           </div>
         );

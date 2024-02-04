@@ -14,6 +14,7 @@ export const SignIn = () => {
 //declared states for form inputs
 const {password, setPassword}= useContext(authContext);
 const {email, setEmail} = useContext(authContext);
+const {invalidCredentials} = useContext(authContext);
 const [checkbox, setCheckbox] = useState(false);
 const [showpass, setShowpass] = useState(false);
 let navigate = useNavigate();
@@ -31,6 +32,9 @@ const handleSubmit = (e)=>{
 
   return (
     <form  className="w-[94%] max-w-[700px] py-[4em] space-y-[1em] mx-[auto] " onSubmit={handleSubmit}>
+      {/* <p> */}
+       {/* Lorem, ipsum dolor. {invalidCredentials?"Invalid email or Password":null} */}
+      {/* </p> */}
       <h1 className="text-[#000] text-[1.25rem] mb-[1em] font-[600]">
         Sign in
       </h1>

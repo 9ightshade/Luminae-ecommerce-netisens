@@ -66,8 +66,9 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [productId, setProductId]  = useState(0);
 const [data, setData] = useState([]);
+const [cart, addToCart] = useState([]);
 let authToken;
-
+let invalidCredentials;
 
 
 
@@ -103,6 +104,9 @@ console.log(authToken);
 navigate('/Product')})
 .catch((error)=>{
 console.log(error);
+invalidCredentials = error;
+console.log(`invalidCredentials:${invalidCredentials}`);
+console.log(Boolean(invalidCredentials));
   })}
 }
 
@@ -110,7 +114,7 @@ console.log(error);
   return (
     <div>
 
-      <authContext.Provider value={{email, setEmail,password, setPassword, productId, setProductId, data, setData, handleauth,authToken }}>
+      <authContext.Provider value={{email, setEmail,password, setPassword, productId, setProductId, data, setData, cart, addToCart, handleauth,authToken, invalidCredentials }}>
       <RouterProvider router={router} />   
       </authContext.Provider>
     </div>

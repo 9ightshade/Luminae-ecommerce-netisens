@@ -15,6 +15,8 @@ export const ProductimagesforTB = () => {
 //context to manage and update db and clicked product id
 const {data, setData, productId, setProductId} = useContext(authContext);
 
+
+
 console.log(
   `clicked product id:${productId}`
  );
