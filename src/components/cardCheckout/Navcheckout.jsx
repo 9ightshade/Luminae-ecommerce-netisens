@@ -1,9 +1,14 @@
+import { useContext } from "react";
+import { authContext } from "../../context/MyContext";
+
 export const NavCheckout = () => {
+const {cart} = useContext(authContext)
+
   return (
     <div>
       <div className="flex justify-between mx-[auto] p-[1em] md:w-[80%] lg-[50%]">
         <p className="hover:text-[#262626] hover:text-[.8rem] transition-all font-[700] uppercase text-[#9D9D9D] text-[.6rem]">
-          Card(3)
+          Card({cart.length})
         </p>
         <p className="hover:text-[#262626] hover:text-[.8rem] transition-all  font-[700] uppercase text-[#9D9D9D] text-[.6rem]">
           Customer info

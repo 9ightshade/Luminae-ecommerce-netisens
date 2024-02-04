@@ -5,7 +5,7 @@ import { authContext } from "../../context/MyContext";
 
 export const Cartbag = () => {
 
-const {cart, addToCart} = useContext(authContext);
+const {cart} = useContext(authContext);
 let cartValue = cart.length;
 
   return (
